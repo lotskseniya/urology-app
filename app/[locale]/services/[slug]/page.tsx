@@ -5,7 +5,7 @@ import { ChevronLeft } from 'lucide-react'
 import Image from 'next/image'
 
 const validSlugs = [
-  'likuvannya-sechokamyanoyi-hvoroby',
+  'kidney-stone-treatment',
   'endoskopichna-urologiya',
   'laparoskopichni-operatsiyi',
   'onkourologiya',

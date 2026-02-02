@@ -29,7 +29,6 @@ interface ServiceCardProps {
 }
 
 const ServiceAccordionCard = ({
-  id,
   title,
   header,
   slug,
@@ -179,9 +178,9 @@ const ServiceAccordionCard = ({
                 </h3>
                 <ChevronDown
                   className={`
-            w-6 h-6 text-[#8B3A3A] transition-transform duration-300 flex-shrink-0
-            ${isExpanded ? 'rotate-180' : 'rotate-0'}
-          `}
+                    w-6 h-6 text-[#8B3A3A] transition-transform duration-300 flex-shrink-0
+                    ${isExpanded ? 'rotate-180' : 'rotate-0'}
+                  `}
                 />
               </button>
 
@@ -196,9 +195,16 @@ const ServiceAccordionCard = ({
                 <div className="px-8 pb-6 bg-white border-t border-gray-200 mt-0">
                   <div className="py-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      {/* Image - properly implemented */}
                       {image && (
                         <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden bg-gray-200">
-                          {/* Image placeholder */}
+                          <Image
+                            src={image}
+                            alt={title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                       )}
 
