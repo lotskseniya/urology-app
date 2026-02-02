@@ -23,10 +23,6 @@
                 "description": "With an individual approach to each patient, taking into account the size and type of stone, kidney function and comorbidities - we develop optimal treatment tactics in each specific case:",
                 "procedures": [
                     {
-                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
-                        "description": "non-operative stone fragmentation with ultrasound waves"
-                    },
-                    {
                         "name": "Contact ureterolithotripsy and nephrolithotripsy",
                         "description": "endoscopic crushing and removal of stones through natural pathways"
                     },
@@ -37,6 +33,10 @@
                     {
                         "name": "Laparoscopic and open surgeries",
                         "description": "in complex or recurrent cases"
+                    },
+                    {
+                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
+                        "description": "non-operative stone fragmentation with ultrasound waves"
                     }
                 ],
                 "image": "/images/services/urolithiasis-1.png"
