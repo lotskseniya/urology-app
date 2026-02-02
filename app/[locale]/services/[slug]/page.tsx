@@ -2,7 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
-import Image from 'next/image'
+import Image from 'next/image';
+import BookVisitBtn from "@/components/BookVisitBtn"
 
 const validSlugs = [
   'kidney-stone-treatment',
@@ -119,7 +120,7 @@ export default async function ServicePage({
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 {t('diagnostics.title')}
               </h2>
-              
+
               {t('diagnostics.intro') && (
                 <p className="text-lg text-gray-700 mb-6">
                   {t('diagnostics.intro')}
@@ -289,21 +290,8 @@ export default async function ServicePage({
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#911F16] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {tCommon('scheduleConsultation')}
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
-            {tCommon('ctaDescription')}
-          </p>
-          <Link
-            href={`/${locale}/contacts`}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#911F16] rounded-full font-semibold hover:bg-gray-100 transition-colors"
-          >
-            {tCommon('bookAppointment')}
-          </Link>
-        </div>
+      <section className="py-16 mx-auto flex">
+        <BookVisitBtn />
       </section>
     </main>
   )

@@ -39,7 +39,7 @@
                         "description": "у складних або рецидивних випадках "
                     }
                 ],
-                "image": "../public/images/kidney-stone.png"
+                "image": "/images/services/urolithiasis-1.png"
             },
             {
                 "id": "laparoscopic",
