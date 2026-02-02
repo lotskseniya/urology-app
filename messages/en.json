@@ -1,0 +1,1187 @@
+{
+    "hero": {
+        "belief": "We believe",
+        "in": "in",
+        "health": "health",
+        "withoutCompromises": "without ",
+        "compromises": "mises",
+        "forEvery": "For",
+        "every": "every",
+        "patient": "patient",
+        "fastEffective1": "A FAST AND EFFECTIVE SOLUTION CAN BE FOUND.",
+        "fastEffective2": "CONTACT US"
+    },
+    "services": {
+        "title": "SERVICES:",
+        "subtitle": "From routine care to complex surgical procedures, we offer a full range of urological treatments using the latest technologies and methods.",
+        "items": [
+            {
+                "id": "kidney-stone-treatment",
+                "title": "KIDNEY STONE TREATMENT",
+                "slug": "kidney-stone-treatment",
+                "preview": "Effective treatment of kidney stone disease using the latest technologies and minimally invasive techniques.",
+                "description": "With an individual approach to each patient, taking into account the size and type of stone, kidney function and comorbidities - we develop optimal treatment tactics in each specific case:",
+                "procedures": [
+                    {
+                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
+                        "description": "non-operative stone fragmentation with ultrasound waves"
+                    },
+                    {
+                        "name": "Contact ureterolithotripsy and nephrolithotripsy",
+                        "description": "endoscopic crushing and removal of stones through natural pathways"
+                    },
+                    {
+                        "name": "Percutaneous Nephrolithotomy (PCNL)",
+                        "description": "minimally traumatic removal of large or complex stones through a small puncture in the lower back"
+                    },
+                    {
+                        "name": "Laparoscopic and open surgeries",
+                        "description": "in complex or recurrent cases"
+                    }
+                ],
+                "image": "/images/services/kidney-stone.png"
+            },
+            {
+                "id": "laparoscopic",
+                "title": "LAPAROSCOPIC SURGERY",
+                "slug": "laparoscopic-surgery",
+                "preview": "High-precision laparoscopic operations with minimal recovery period.",
+                "description": "Modern laparoscopic methods allow performing complex operations through small incisions.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "endoscopic-surgery",
+                "title": "ENDOSCOPIC SURGERY",
+                "slug": "endoscopic-surgery",
+                "preview": "Modern minimally invasive methods for treating urological diseases.",
+                "description": "We use the most advanced minimally invasive surgery techniques for rapid recovery and minimal discomfort.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "reproductive-surgery",
+                "title": "REPRODUCTIVE ORGAN SURGERY",
+                "slug": "reproductive-organ-surgery",
+                "preview": "Delicate reproductive organ surgeries using modern techniques.",
+                "description": "Professional approach to surgical treatment of reproductive organ diseases.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "robotic-surgery",
+                "title": "ROBOTIC SURGERY",
+                "slug": "robotic-surgery",
+                "preview": "State-of-the-art robotic systems for maximum surgical precision.",
+                "description": "Utilization of Da Vinci robotic systems for high-precision operations.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "mens-health",
+                "title": "MEN'S AND WOMEN'S HEALTH",
+                "slug": "mens-and-womens-health",
+                "preview": "Comprehensive approach to treatment and prevention of urological diseases.",
+                "description": "Individual diagnostic and treatment programs for men and women.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "cancer-treatment",
+                "title": "CANCER TREATMENT",
+                "slug": "cancer-treatment",
+                "preview": "Modern methods of diagnosis and treatment of oncological diseases.",
+                "description": "Comprehensive approach to treating oncourological diseases using the most advanced protocols.",
+                "procedures": [],
+                "image": ""
+            }
+        ],
+        "performedInDepartment": "Performed in our department:"
+    },
+    "serviceDetail": {
+        "backToServices": "Back to services",
+        "performedInDepartment": "Performed in our department:",
+        "bookConsultation": "Book consultation"
+    },
+    "servicePages": {
+        "kidney-stone-treatment": {
+            "title": "Urolithiasis Treatment",
+            "subtitle": "Urolithiasis is one of the most common urological diseases, arising from the formation of stones (calculi) in the kidneys, ureters, or bladder.",
+            "diagnostics": {
+                "title": "Diagnostics:",
+                "intro": "For accurate diagnosis, we use:",
+                "methods": [
+                    "Ultrasound examination (US) of the urinary system organs",
+                    "Computed tomography (CT) of kidneys and ureters",
+                    "Laboratory analysis of urine, blood, stones",
+                    "X-ray examination (when indicated)"
+                ],
+                "description": "Diagnostics allows determining the size, location, and composition of the stone, which is crucial for choosing the optimal treatment approach."
+            },
+            "treatment": {
+                "title": "Treatment:",
+                "intro": "We offer an individual approach to each patient, considering the size and type of stone, renal function status, and comorbidities.",
+                "subtitle": "Our department performs:",
+                "methods": [
+                    {
+                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
+                        "description": "non-surgical stone fragmentation using ultrasound waves"
+                    },
+                    {
+                        "name": "Contact ureterolithotripsy and nephrolithotripsy",
+                        "description": "endoscopic stone fragmentation and removal through natural pathways"
+                    },
+                    {
+                        "name": "Percutaneous nephrolithotomy (PCNL)",
+                        "description": "minimally invasive removal of large or complex stones through a small incision in the lower back"
+                    },
+                    {
+                        "name": "Laparoscopic and open operations",
+                        "description": "in complex or recurrent cases"
+                    }
+                ],
+                "aftercare": "After treatment, metabolic examination is conducted to prevent stone recurrence."
+            },
+            "prevention": {
+                "title": "Prevention:",
+                "intro": "We provide consultations on:",
+                "methods": [
+                    "rational nutrition for those prone to stone formation,",
+                    "optimal drinking regimen,",
+                    "control of salt levels and metabolism."
+                ],
+                "description": "Regular follow-up with a urologist helps avoid recurrence and maintain kidney health."
+            },
+            "consultation": {
+                "title": "Consultation:",
+                "description": "Our doctors have extensive experience in treating urolithiasis of any complexity. By contacting us, you will receive an accurate diagnosis, modern treatment and care for your health."
+            },
+            "images": [
+                "/images/services/urolithiasis-1.png",
+                "/images/services/urolithiasis-2.png",
+                "/images/services/urolithiasis-3.png"
+            ]
+        },
+        "endoskopichna-urologiya": {
+            "title": "Endoscopic Urology",
+            "subtitle": "Modern minimally invasive methods for diagnosis and treatment of urological diseases using endoscopic equipment.",
+            "diagnostics": {
+                "title": "Diagnostic Procedures:",
+                "methods": [
+                    "Cystoscopy – bladder examination",
+                    "Ureteroscopy – ureter examination",
+                    "Nephroscopy – kidney examination"
+                ]
+            },
+            "treatment": {
+                "title": "Treatment Procedures:",
+                "methods": [
+                    {
+                        "name": "Transurethral resection (TUR)",
+                        "description": "removal of bladder and prostate tumors"
+                    },
+                    {
+                        "name": "Contact lithotripsy",
+                        "description": "stone fragmentation under endoscopic control"
+                    },
+                    {
+                        "name": "Ureteral stenting",
+                        "description": "restoration of urine outflow"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/endoscopy-1.jpg",
+                "/images/services/endoscopy-2.jpg"
+            ]
+        },
+        "laparoskopichni-operatsiyi": {
+            "title": "Laparoscopic Operations",
+            "subtitle": "Minimally invasive surgery through small incisions using a video camera and specialized instruments.",
+            "treatment": {
+                "title": "Types of Laparoscopic Operations:",
+                "methods": [
+                    {
+                        "name": "Nephrectomy",
+                        "description": "kidney removal for tumors or non-functioning kidney"
+                    },
+                    {
+                        "name": "Kidney resection",
+                        "description": "partial removal for localized tumors"
+                    },
+                    {
+                        "name": "Pyeloplasty",
+                        "description": "restoration of ureteropelvic junction patency"
+                    },
+                    {
+                        "name": "Adrenalectomy",
+                        "description": "removal of adrenal gland tumors"
+                    }
+                ],
+                "advantages": [
+                    "Less traumatic",
+                    "Faster recovery",
+                    "Reduced pain syndrome",
+                    "Better cosmetic effect"
+                ]
+            },
+            "images": [
+                "/images/services/laparoscopy-1.jpg",
+                "/images/services/laparoscopy-2.jpg"
+            ]
+        },
+        "onkourologiya": {
+            "title": "Oncourology",
+            "subtitle": "Comprehensive diagnosis and treatment of malignant tumors of the genitourinary system.",
+            "diagnostics": {
+                "title": "Diagnostics:",
+                "methods": [
+                    "Doppler ultrasound",
+                    "Contrast-enhanced CT",
+                    "Pelvic MRI",
+                    "Ultrasound-guided biopsy",
+                    "Tumor markers (PSA, CA 19-9)"
+                ]
+            },
+            "treatment": {
+                "title": "Treatment:",
+                "methods": [
+                    {
+                        "name": "Radical prostatectomy",
+                        "description": "for prostate cancer"
+                    },
+                    {
+                        "name": "Radical nephrectomy",
+                        "description": "for kidney cancer"
+                    },
+                    {
+                        "name": "Radical cystectomy",
+                        "description": "for bladder cancer"
+                    },
+                    {
+                        "name": "TUR of tumors",
+                        "description": "organ-preserving operations"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/oncology-1.jpg",
+                "/images/services/oncology-2.jpg"
+            ]
+        },
+        "zhinocha-urologiya": {
+            "title": "Female Urology",
+            "subtitle": "Specialized care for women with urological conditions.",
+            "treatment": {
+                "title": "Main Directions:",
+                "methods": [
+                    {
+                        "name": "Treatment of urinary incontinence",
+                        "description": "conservative and surgical"
+                    },
+                    {
+                        "name": "Pelvic organ prolapse",
+                        "description": "reconstructive operations"
+                    },
+                    {
+                        "name": "Recurrent infections",
+                        "description": "diagnosis and prevention"
+                    },
+                    {
+                        "name": "Chronic pain syndrome",
+                        "description": "comprehensive therapy"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/female-urology-1.jpg",
+                "/images/services/female-urology-2.jpg"
+            ]
+        },
+        "nevidkladna-urologiya": {
+            "title": "Emergency Urology",
+            "subtitle": "24/7 emergency care for acute urological conditions.",
+            "treatment": {
+                "title": "Emergency Conditions:",
+                "methods": [
+                    {
+                        "name": "Acute urinary retention",
+                        "description": "catheterization, epicystostomy"
+                    },
+                    {
+                        "name": "Renal colic",
+                        "description": "pain relief, stenting"
+                    },
+                    {
+                        "name": "Genitourinary trauma",
+                        "description": "conservative and surgical treatment"
+                    },
+                    {
+                        "name": "Testicular torsion",
+                        "description": "emergency surgery"
+                    },
+                    {
+                        "name": "Bleeding",
+                        "description": "hemostasis, tamponade"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/emergency-1.jpg"
+            ]
+        }
+    },
+    "common": {
+        "header": "ПОСЛУГИ:",
+        "learnMore": "Learn More",
+        "performedInDepartment": "Performed in our department:",
+        "backToServices": "Back to Services",
+        "advantages": "Advantages",
+        "scheduleConsultation": "Schedule a Consultation",
+        "ctaDescription": "Our specialists are ready to provide you with qualified assistance",
+        "bookAppointment": "Book an Appointment"
+    },
+    "navbar": {
+        "nameDepartment": "Urological Department",
+        "nameClinicFull": "Kyiv Municipal Clinic № 3",
+        "nameClinicSm": "KMC № 3",
+        "services": "Services",
+        "team": "Our Doctors",
+        "contacts": "Contacts",
+        "buttonFull": "Book a visit",
+        "buttonSm": "Booking"
+    },
+    "stats": {
+        "experience": {
+            "number": "50+",
+            "label": "Years of Experience"
+        },
+        "treatments": {
+            "number": "45000+",
+            "label": "Treatments Completed"
+        },
+        "specialists": {
+            "number": "Top",
+            "label": "Specialists"
+        }
+    },
+    "team": {
+        "title": "Our Team",
+        "description": "Highly qualified specialists with years of experience in the field of urology",
+        "labels": {
+            "timeline": "Work Experience",
+            "fields": "Practical Areas of Work",
+            "languages": "Languages",
+            "experience": "Work Experience:",
+            "years": "years",
+            "globalTags": {
+                "1": "Prostate biopsy",
+                "2": "Bladder biopsy",
+                "3": "Removal and coagulation of neoplasms (papillomas, condylomas)",
+                "4": "Excision of epididymal cyst",
+                "5": "Excision of urethral polyp",
+                "6": "Extracorporeal shock wave lithotripsy",
+                "7": "Endoscopic urology",
+                "8": "Contact laser lithotripsy",
+                "9": "Correction of penile curvature",
+                "10": "Laser lithotripsy",
+                "11": "Laparoscopic interventions",
+                "12": "Treatment of varicocele (varicose veins of the spermatic cord)",
+                "13": "Treatment of hydrocele",
+                "14": "Treatment of inflammatory diseases of the genitourinary system",
+                "15": "Treatment of phimosis and paraphimosis",
+                "16": "Treatment of neurogenic bladder disorders",
+                "17": "Treatment of urinary incontinence in women",
+                "18": "Treatment of prostatitis",
+                "19": "Treatment of urolithiasis (kidney, ureter, bladder stones)",
+                "20": "Treatment of urethritis",
+                "21": "Treatment of cystitis",
+                "22": "Treatment of sexually transmitted infections",
+                "23": "Lithotripsy",
+                "24": "Minimally invasive interventions for urolithiasis",
+                "25": "Minimally invasive procedures",
+                "26": "Emergency surgery for acute urinary retention",
+                "27": "Emergency surgery for bladder bleeding",
+                "28": "Emergency surgery for renal colic",
+                "29": "Emergency surgery for testicular torsion",
+                "30": "Emergency surgery for urinary tract injuries",
+                "31": "Nephrectomy (kidney resection)",
+                "32": "Nephrolithotripsy",
+                "33": "Nephrostomy",
+                "34": "Millin procedure",
+                "35": "Operations on genitourinary organs",
+                "36": "Optical urethrotomy",
+                "37": "Frenuloplasty",
+                "38": "Kidney cancer",
+                "39": "Prostate cancer",
+                "40": "Bladder cancer",
+                "41": "Complex urological operations",
+                "42": "TURP (transurethral resection of the prostate)",
+                "43": "TUR of the prostate",
+                "44": "TURBT (transurethral resection of bladder tumor)",
+                "45": "Ultrasound diagnostics of kidneys, bladder, prostate",
+                "46": "Ultrasound examination of urinary system organs",
+                "47": "Ureteropyeloscopy",
+                "48": "Ureteroscopy",
+                "49": "Cystoscopy",
+                "50": "Partial nephrectomy (including laparoscopic)",
+                "51": "Transvesical prostatectomy",
+                "52": "Retropubic prostatectomy",
+                "53": "Botox in urology",
+                "54": "Female urology",
+                "55": "Treatment of purulent kidney inflammation",
+                "56": "Treatment of urinary incontinence",
+                "57": "Prostatectomy"
+            }
+        },
+        "members": {
+            "member1": {
+                "name": "EVGENIYA DMITRIVNA",
+                "surname": "DOVZHNOK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist, ultrasound doctor, healthcare administration specialist",
+                "timeline": [
+                    "Since 2022 - to present - Urologist, Kyiv City Clinical Hospital No. 3;",
+                    "From 2024 to the present - Urologist, ultrasound doctor, Agapit Medical Center",
+                    "From March to September 2023 - Urologist, ultrasound doctor, Dobrobut Medical Center;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Urological diagnostics and treatment;",
+                    "Ultrasound examinations of the urinary system;",
+                    "Minimally invasive and open surgical interventions;",
+                    "Working with the electronic medical system eHealth;",
+                    "Administration and management of medical processes;"
+                ],
+                "languages": [
+                    "UKR",
+                    "ENG",
+                    "DE"
+                ],
+                "experienceSince": 2022,
+                "tags": [
+                    46
+                ]
+            },
+            "member2": {
+                "name": "YURIY PETROVICH",
+                "surname": "MYKHALCHYSHYN",
+                "photo": "/images/team/member2.png",
+                "position": "Head of the Department. Urologist of the Highest Qualification Category since 2004.",
+                "timeline": [
+                    "Since 2017 - Head of the Urology Department of Kyiv City Clinical Hospital No.3;",
+                    "Since 2006 - Specialist in Ultrasound Diagnostics;",
+                    "From 1992 to the present, consultant at the polyclinic of the Kyiv City Clinical Hospital No. 2, Desnyansky district;",
+                    "From 1988 to the present - urologist at the Kyiv City Clinical Hospital No.3"
+                ],
+                "fields": [
+                    "Minimally invasive interventions for urolithiasis;",
+                    "Full spectrum of endoscopic urology;",
+                    "Surgeries on the genitourinary organs;"
+                ],
+                "languages": [
+                    "UKR",
+                    "ENG"
+                ],
+                "experienceSince": 1988,
+                "tags": [
+                    35,
+                    24,
+                    7
+                ]
+            },
+            "member3": {
+                "name": "IVANE",
+                "surname": "TSIKISHVILI",
+                "photo": "/images/team/member3.png",
+                "position": "Urologist",
+                "timeline": [
+                    "From August 2017 to the present - Urologist at Kyiv City Clinical Hospital No.3;",
+                    "Since 2017 - Head of the Urology Department of Kyiv City Clinical Hospital No.3;",
+                    "In 2011 - Urology at the Oldenburg clinic, Germany;",
+                    "From July to September 2010 - Cardiac Surgery at the Clinic of Oldenburg, Germany;",
+                    "In 2009 - Vascular Surgery at the University Hospital of Jena, Germany;",
+                    "From December 2008 to August 2009 - Emergency Care (Admissions) Tbilisi, Georgia, Central Republican Hospital"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis and treatment of diseases of the urinary system, including oncological (kidney, bladder, prostate cancer);",
+                    "Performance of complex urological operations:",
+                    "Kidney resection (nephrectomy, partial nephrectomy);",
+                    "TUR (transurethral resection) of bladder tumors;",
+                    "TUR (transurethral resection) of the prostate;",
+                    "Transvesical prostatectomy;",
+                    "Millin's operation;",
+                    "Urolithiasis operations (rolling nephrolithotripsy, ureteroscopy, lithotripsy);",
+                    "Urgent urology:",
+                    "Performing emergency surgeries for acute urinary retention, renal colic, urinary tract injuries, testicular torsion, bladder bleeding;",
+                    "Endoscopic and laparoscopic interventions in urology;",
+                    "Ultrasound diagnostics of the kidneys, bladder, prostate gland;"
+                ],
+                "languages": [
+                    "UKR",
+                    "GE",
+                    "DE"
+                ],
+                "experienceSince": 2008,
+                "tags": [
+                    34,
+                    32,
+                    42,
+                    43,
+                    44,
+                    48,
+                    23,
+                    51,
+                    45,
+                    11,
+                    31,
+                    50,
+                    41,
+                    38,
+                    39,
+                    40,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30
+                ]
+            },
+            "member4": {
+                "name": "LEVAN TEYMURAZOVYCH",
+                "surname": "BAKARADZE",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2013 to the present, urologist at Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Conducting consultative reception of urological patients;",
+                    "Diagnosis, treatment and prevention of urological diseases;",
+                    "Performing minimally invasive manipulations and participating in surgical interventions;"
+                ],
+                "languages": [
+                    "UKR",
+                    "GE",
+                    "ENG",
+                    "DE"
+                ],
+                "experienceSince": 2013,
+                "tags": [
+                    25
+                ]
+            },
+            "member5": {
+                "name": "MYKOLA VOLODYMYROVYCH",
+                "surname": "BERESTOVY",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "Urologist of Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Treatment of inflammatory diseases of the genitourinary system",
+                    "Treatment of sexually transmitted infections;",
+                    "Surgical urology:",
+                    "Benign prostatic hyperplasia;",
+                    "Removal and coagulation of neoplasms (papillomas, condylomas);",
+                    "Treatment of urolithiasis (kidney, ureter, bladder stones);",
+                    "Contact laser lithotripsy;",
+                    "Treatment of hydrocele of the testicle;",
+                    "Treatment of varicose veins of the spermatic cord (varicocele);",
+                    "Treatment of urinary incontinence in women;",
+                    "Treatment of narrowing of the foreskin of the penis (phimosis, paraphimosis);",
+                    "Penile frenulum plastic surgery;",
+                    "Urethral polyp excision;",
+                    "Epididymal cyst excision;",
+                    "Nephrostomy, Cystoscopy;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2019,
+                "tags": [
+                    33,
+                    49,
+                    13,
+                    12,
+                    15,
+                    37,
+                    17,
+                    54,
+                    4,
+                    5,
+                    23,
+                    14,
+                    22
+                ]
+            },
+            "member6": {
+                "name": "YURIY MYKHAYLOVYCH",
+                "surname": "GRIDZHUK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "Urologist of Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Conducting consultative reception of urological patients;",
+                    "Diagnosis, treatment and prevention of urological diseases;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2008,
+                "tags": [
+                    14
+                ]
+            },
+            "member7": {
+                "name": "VOLODYMIR VOLODYMYROVYCH",
+                "surname": "DINSLER",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": "Since 2020 - Urologist of the Kyiv City Clinical Hospital No.3",
+                "department": "Urology Department",
+                "fields": [
+                    "Conducting consultative reception of urological patients;",
+                    "Diagnosis, treatment and prevention of urological diseases;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2020,
+                "tags": [
+                    14
+                ]
+            },
+            "member8": {
+                "name": "TETYANA VASILIVNA",
+                "surname": "KNAPIK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the Second Qualification Category in the Specialty `Urology`",
+                "timeline": [
+                    "From 2017 to the present - Urologist at Kyiv City Clinical Hospital No.3;",
+                    "From 2018 - 2019 - Urologist at Polyclinic No.1 of the Dnipro district"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis and examination;",
+                    "Treatment of urological diseases:",
+                    "Conservative treatment of conditions such as urinary tract infections, urolithiasis, prostatitis, etc.;",
+                    "Preparation and performance of surgical interventions (endoscopic operations, open surgery, laparoscopy);",
+                    "Providing emergency care for acute conditions (acute urinary retention, renal colic, injuries and bleeding of the genitourinary system);",
+                    "Consultations and interdisciplinary interaction (collaboration with other specialists (oncologists, surgeons) for a comprehensive approach);"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2017,
+                "tags": [
+                    33,
+                    19,
+                    14,
+                    7,
+                    11,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30
+                ]
+            },
+            "member9": {
+                "name": "ANTON MAKSIMOVICH",
+                "surname": "KRYLOV",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2023 to the present - Urologist at Kyiv City Clinical Hospital No.3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis, treatment and prevention of urological diseases;",
+                    "Performance of minimally invasive manipulations and participation in surgical interventions;",
+                    "Urological emergency care;"
+                ],
+                "languages": [
+                    "UKR",
+                    "ENG"
+                ],
+                "experienceSince": 2023,
+                "tags": [
+                    14,
+                    25
+                ]
+            },
+            "member10": {
+                "name": "MYKITA SERGIYOVYCH",
+                "surname": "KULINICH",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2020 to the present, urologist at Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis and treatment of diseases of the urinary system, including oncological (kidney, bladder, prostate cancer);",
+                    "Urological operations:",
+                    "Nephrectomy, partial nephrectomy (including laparoscopic);",
+                    "TUR (transurethral resection) of bladder tumors;",
+                    "TUR (transurethral resection) of the prostate;",
+                    "Transvesical prostatectomy;",
+                    "Prostatectomy;",
+                    "Urolithiasis operations (spinal nephrolithotripsy, ureteroscopy, lithotripsy);",
+                    "Urgent urology:",
+                    "Performing emergency surgeries for acute urinary retention, renal colic, urinary tract injuries, testicular torsion, bladder bleeding;",
+                    "Endoscopic and laparoscopic interventions in urology;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2020,
+                "tags": [
+                    38,
+                    39,
+                    40,
+                    31,
+                    50,
+                    42,
+                    44,
+                    51,
+                    52,
+                    48,
+                    32,
+                    23,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30
+                ]
+            },
+            "member11": {
+                "name": "ANATOLIY ANATOLIYOVYCH",
+                "surname": "METLYAKOV",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2013 to the present - Urologist at Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis, treatment and prevention of urological diseases;",
+                    "Urological emergency care;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2013,
+                "tags": [
+                    14,
+                    25
+                ]
+            },
+            "member12": {
+                "name": "ANGELA VASYLIVNA",
+                "surname": "METLYAKOVA",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2021 to the present, urologist at Kyiv City Clinical Hospital No. 3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis, treatment and prevention of urological diseases;",
+                    "Urological emergency care;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2021,
+                "tags": [
+                    14,
+                    25
+                ]
+            },
+            "member13": {
+                "name": "DMYTRO MYKHAYLOVYCH",
+                "surname": "MYKHAYLOV",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the Highest Qualification Category. Candidate of Medical Sciences.",
+                "timeline": [
+                    "Full member of EAU (European Association of Urology)",
+                    "Member of ICS (International Society of Urinary Incontinence), full member of ES (Endourological Society), as well as national societies (Ukrainian Urological Association, Ukrainian Onco-Urological Society);",
+                    "",
+                    "Additionally, he has specializations in oncology and pediatric urology.",
+                    "He completed internships in urodynamics (Canada), clinical urology (USA), and urolithiasis (Greece)."
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Minimally invasive interventions for urolithiasis;",
+                    "Female urology;",
+                    "Treatment of urinary incontinence;",
+                    "The use of Botox in urology;",
+                    "Treatment of purulent inflammation of the kidneys"
+                ],
+                "languages": [
+                    "UKR",
+                    "ENG"
+                ],
+                "experienceSince": 1997,
+                "tags": [
+                    55,
+                    53,
+                    24,
+                    54,
+                    56
+                ]
+            },
+            "member14": {
+                "name": "DMYTRO FEDOROVYCH",
+                "surname": "NOVITSYUK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    ""
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Inflammatory diseases of the genitourinary system;",
+                    "Treatment of sexually transmitted infections;",
+                    "Surgical urology:",
+                    "Benign prostatic hyperplasia;",
+                    "Removal and coagulation of neoplasms (papillomas, condylomas);",
+                    "Treatment of urolithiasis (kidney, ureter, bladder stones);",
+                    "Contact laser lithotripsy;",
+                    "Treatment of hydrocele;",
+                    "Treatment of varicose veins of the spermatic cord (varicocele);",
+                    "Treatment of urinary incontinence in women;",
+                    "Treatment of narrowing of the foreskin of the penis (phimosis, paraphimosis);",
+                    "Penis frenulum plastic surgery;",
+                    "Excision of urethral polyp;",
+                    "Excision of epididymal cyst;",
+                    "Bladder Instillation;",
+                    "Bladder Catheterization;",
+                    "Nephrostomy, Cystoscopy;",
+                    "Treatment of Prostatitis;",
+                    "Treatment of Urethritis;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2000,
+                "tags": [
+                    33,
+                    49,
+                    12,
+                    13,
+                    15,
+                    37,
+                    18,
+                    20,
+                    21,
+                    4,
+                    5,
+                    14,
+                    22,
+                    19
+                ]
+            },
+            "member15": {
+                "name": "NESTOR RUSLANOVYCH",
+                "surname": "NOSENKO",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "From 2021 to the present - Urologist at Kyiv City Clinical Hospital No.3;",
+                    "From 2022-2025 - Urologist at Kyiv City Clinical Hospital No.11;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Treatment of inflammatory diseases of the genitourinary system;",
+                    "Urological diagnostics and treatment;",
+                    "Minimally invasive and open surgical interventions;",
+                    "Working with the electronic medical system eHealth;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2021,
+                "tags": [
+                    14,
+                    25
+                ]
+            },
+            "member16": {
+                "name": "IGOR VIKTOROVYCH",
+                "surname": "OPANASCHUK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "Full member of the EAU (European Association of Urology)",
+                    "Member of the Union of Oncologists of Ukraine",
+                    ""
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Diagnosis and treatment of urological diseases",
+                    "Ultrasound diagnostics;"
+                ],
+                "languages": [
+                    "UKR",
+                    "ENG"
+                ],
+                "experienceSince": 2006,
+                "tags": [
+                    14,
+                    25,
+                    45
+                ]
+            },
+            "member17": {
+                "name": "SVYATOSLAV VOLODYMYROVYCH",
+                "surname": "PRYKHODKO",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the First Qualification Category",
+                "timeline": [
+                    "Urologist at Kyiv City Clinical Hospital No.3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Treatment of inflammatory diseases of the genitourinary system (balanoposthitis, urethritis, prostatitis, orchoepididymitis, pyelonephritis);",
+                    "Treatment of sexually transmitted infections;",
+                    "Laparoscopic surgical interventions (radical prostatectomy; nephrectomy for cancer or hydronephrosis, kidney resection, pyeloureteral segment plastic surgery, renal cyst excision, varicocele excision, etc.);",
+                    "Endoscopic surgical interventions (TUR of the prostate; TUR of the bladder; contact lithotripsy for SCH of the bladder, ureter, kidney; optical urethrotomy;",
+                    "Open surgical urology (nephrectomy, prostatectomy; excision of varicocele (Marmara et al.); excision of epididymal cysts or hydrocele; frenulum plastic surgery; circumcision; excision of urethral polyp; removal of warts; correction of penile curvature, etc.);",
+                    "Urgent urology (placement or replacement of urethral catheter, cystostomy, nephrostomy; ureteral stenting; percutaneous cystostomy; percutaneous nephrostomy);",
+                    "Ultrasound diagnostics of kidneys, bladder, prostate;",
+                    "Urethroscopy, Cystoscopy, Ureteropyeloscopy;",
+                    "Bladder, prostate biopsy;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2013,
+                "tags": [
+                    1,
+                    2,
+                    47,
+                    48,
+                    49,
+                    9,
+                    15,
+                    37,
+                    4,
+                    5,
+                    45,
+                    57,
+                    31,
+                    36,
+                    44,
+                    43
+                ]
+            },
+            "member18": {
+                "name": "OLEKSANDR ANATOLIYOVICH",
+                "surname": "RYAZANOV",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the Highest Qualification Category since 2004.",
+                "timeline": [
+                    "From 1996 to the present - urologist of Kyiv City Clinical Hospital No. 3;",
+                    "From 2010 to the present - urologist of the State Institution `Heart Institute of the Ministry of Health of Ukraine`"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Conservative treatment (drug therapy) of conditions such as urinary tract infections, urolithiasis, prostatitis, etc.;",
+                    "Preparation and conduct of surgical interventions (endoscopic operations, open surgery);",
+                    "Extracorporeal shock wave lithotripsy"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 1996,
+                "tags": [
+                    6,
+                    7,
+                    19,
+                    14,
+                    22,
+                    18
+                ]
+            },
+            "member19": {
+                "name": "TOGRUL",
+                "surname": "TEYMUROV",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "Urologist of Kyiv City Clinical Hospital No. 3;",
+                    "Urologist of the Ukrainian Medical Center of Sports Medicine of the Ministry of Youth and Sports of Ukraine;",
+                    "Urologist of Smart Medical Center"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Ultrasound diagnostics of the genitourinary system;",
+                    "Treatment of urolithiasis;",
+                    "Treatment of inflammatory processes of the genitourinary system;",
+                    "Treatment of prostatic hyperplasia;",
+                    "Treatment of neurogenic bladder diseases;",
+                    "Genitals` Surgeries, endoscopic operations for prostate adenoma"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2020,
+                "tags": [
+                    45,
+                    19,
+                    14,
+                    18,
+                    16,
+                    35
+                ]
+            },
+            "member20": {
+                "name": "OLEG SERGIYOVYCH",
+                "surname": "KHABENETS",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist",
+                "timeline": [
+                    "Urologist of Kyiv City Clinical Hospital No.3;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Treatment of inflammatory diseases of the genitourinary system;",
+                    "Treatment of sexually transmitted infections;",
+                    "Surgical urology:",
+                    "Benign prostatic hyperplasia treatment;",
+                    "Removal and coagulation of neoplasms (papillomas, condylomas)",
+                    "Treatment of urolithiasis (kidney, ureter, bladder stones);",
+                    "Contact laser lithotripsy",
+                    "Treatment of hydrocele of the testicle;",
+                    "Treatment of varicose veins of the spermatic cord (varicocele);",
+                    "Treatment of urinary incontinence in women;",
+                    "Treatment of narrowing of the foreskin of the penis (phimosis, paraphimosis)",
+                    "Penis frenulum plastic surgery",
+                    "Excision of urethral polyp",
+                    "Excision of epididymal cyst",
+                    "Bladder instillation",
+                    "Bladder catheterization",
+                    "Nephrostomy, Cystoscopy",
+                    "Prostatitis Treatment;",
+                    "Urethritis Treatment;",
+                    "Cystitis Treatment",
+                    "Ultrasound diagnostics of kidneys and bladder;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2014,
+                "tags": [
+                    18,
+                    20,
+                    21,
+                    19,
+                    8,
+                    13,
+                    12,
+                    17,
+                    15,
+                    37,
+                    5,
+                    4,
+                    3,
+                    33,
+                    49
+                ]
+            },
+            "member21": {
+                "name": "OLEKSANDR VASYLOVICH",
+                "surname": "KHODKO",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the First Qualification Category",
+                "timeline": [
+                    "Urologist of the Ukrainian Medical Center of Sports Medicine of the Ministry of Youth and Sports of Ukraine;"
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Treatment of inflammatory diseases of the genitourinary system;",
+                    "Treatment of sexually transmitted infections;",
+                    "Surgical urology:",
+                    "Treatment of benign prostatic hyperplasia;",
+                    "Removal and coagulation of neoplasms (papillomas, condylomas);",
+                    "Treatment of urolithiasis (kidney, ureter, bladder stones);",
+                    "Contact laser lithotripsy;",
+                    "Treatment of hydrocele;",
+                    "Treatment of varicose veins of the spermatic cord (varicocele)",
+                    "Treatment of urinary incontinence in women;",
+                    "Treatment of narrowing of the foreskin of the penis (phimosis, paraphimosis)",
+                    "Penis frenulum plastic surgery",
+                    "Excision of urethral polyp;",
+                    "Excision of epididymal cyst;",
+                    "Bladder Instillation;",
+                    "Nephrostomy, Cystoscopy",
+                    "Prostatitis Treatment;",
+                    "Urethritis Treatment;",
+                    "Cystitis Treatment"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2007,
+                "tags": [
+                    19,
+                    20,
+                    21,
+                    18,
+                    8,
+                    13,
+                    12,
+                    17,
+                    15,
+                    37,
+                    5,
+                    4,
+                    3,
+                    14,
+                    22,
+                    33,
+                    49
+                ]
+            },
+            "member22": {
+                "name": "OLEKSANDR IVANOVYCH",
+                "surname": "CHELENYUK",
+                "photo": "/images/team/member1.jpg",
+                "position": "Urologist of the Second Qualification Category in the specialty `Urology`",
+                "timeline": [
+                    "From 2016 to the present - urologist, head of the hospital blood bank of Kyiv City Clinical Hospital No. 3;",
+                    "From 2019 to the present - urologist of Smart Medical Center",
+                    "From 2016-2017 - urologist, LLC `Ameda`",
+                    "From 2014-2015 - urologist, Ukrainian Center for Intensive Care of Sepsis, Kyiv City Clinical Hospital No. 3",
+                    "From 2014-2016 - urologist at the Polyclinic of Kyiv City Clinical Hospital No. 11",
+                    "Experience in conducting clinical trials of drugs: - Phase III, urinary tract infection, co-investigator, 2016 - 2020."
+                ],
+                "department": "Urology Department",
+                "fields": [
+                    "Urological diagnostics and treatment;",
+                    "Minimally invasive and open surgical interventions;"
+                ],
+                "languages": [
+                    "UKR"
+                ],
+                "experienceSince": 2013,
+                "tags": [
+                    14,
+                    25,
+                    45
+                ]
+            }
+        }
+    }
+}

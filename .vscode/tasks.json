@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm start",
+            "type": "shell",
+            "command": "npm start",
+            "group": "build"
+        },
+        {
+            "label": "npm install",
+            "type": "shell",
+            "command": "npm install"
+        },
+        {
+            "label": "run tests",
+            "type": "shell",
+            "command": "npm test"
+        },
+        {
+            "label": "build production",
+            "type": "shell",
+            "command": "npm build"
+        },
+        {
+            "label": "dev mode",
+            "type": "shell",
+            "command": "npm run dev"
+        }
+    ]
+}
