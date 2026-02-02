@@ -116,7 +116,7 @@ const LoadingScreen = ({ isLoading, onLoadComplete }: LoadingScreenProps) => {
 
                     {/* Images - middle one bigger */}
                     <div className="flex-1 flex items-center justify-center px-4">
-                        <div className="flex items-end justify-center gap-1 md:gap-2">
+                        <div className="flex items-center justify-center gap-1 md:gap-2">
                             {images.map((imagePath, index) => {
                                 const isMiddle = index === 1
 
@@ -160,14 +160,14 @@ const LoadingScreen = ({ isLoading, onLoadComplete }: LoadingScreenProps) => {
                                         style={{ zIndex: isMiddle && isDiving ? 50 : index }}
                                     >
                                         <div
-                                            className={`bg-white overflow-hidden shadow-xl relative ${isMiddle ? 'w-70 h-90' : 'w-66 h-86'
+                                            className={`bg-white overflow-hidden shadow-xl relative ${isMiddle ? 'w-90 h-106' : 'w-86 h-76'
                                                 }`}
                                         >
                                             <Image
                                                 src={imagePath}
                                                 alt={`Loading image ${index + 1}`}
                                                 fill
-                                                className="object-cover"
+                                                className="object-contain"
                                                 unoptimized
                                             />
                                         </div>
