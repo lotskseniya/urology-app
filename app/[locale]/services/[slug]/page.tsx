@@ -85,7 +85,7 @@ export default async function ServicePage({
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             {t('title')}
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl">
+          <p className="text-lg md:text-xl text-gray-600 max-w-5xl">
             {t('subtitle')}
           </p>
         </div>
@@ -116,7 +116,7 @@ export default async function ServicePage({
       {diagnosticMethods.length > 0 && (
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl">
+            <div className="max-w-[90dvw]">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 {t('diagnostics.title')}
               </h2>
@@ -137,7 +137,7 @@ export default async function ServicePage({
               </ul>
 
               {t('diagnostics.description') && (
-                <p className="text-gray-600 text-xl  italic">
+                <p className="text-gray-600 text-xl italic">
                   {t('diagnostics.description')}
                 </p>
               )}
@@ -150,13 +150,13 @@ export default async function ServicePage({
       {treatmentMethods.length > 0 && (
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl">
+            <div className="max-w-[90dvw]">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 {t('treatment.title')}
               </h2>
 
               {t('treatment.intro') && (
-                <p className="text-xl  text-gray-700 mb-6">
+                <p className="text-xl text-gray-700 mb-6">
                   {t('treatment.intro')}
                 </p>
               )}
@@ -251,7 +251,7 @@ export default async function ServicePage({
       {t('consultation.title') && (
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl">
+            <div className="max-w-[90dvw]">
               <div className="flex items-start gap-3 mb-6">
                 <span className="text-3xl">💬</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
