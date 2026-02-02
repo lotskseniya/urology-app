@@ -113,8 +113,10 @@
                 "methods": [
                     "Ultrasound examination (US) of the urinary system organs",
                     "Computed tomography (CT) of kidneys and ureters",
-                    "Laboratory analysis of urine, blood, stones",
-                    "X-ray examination (when indicated)"
+                    "Laboratory analysis of urine, blood",
+                    "X-ray examination (when indicated)",
+                    "Radiological examination methods",
+                    "Angiography"
                 ],
                 "description": "Diagnostics allows determining the size, location, and composition of the stone, which is crucial for choosing the optimal treatment approach."
             },
@@ -123,10 +125,6 @@
                 "intro": "We offer an individual approach to each patient, considering the size and type of stone, renal function status, and comorbidities.",
                 "subtitle": "Our department performs:",
                 "methods": [
-                    {
-                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
-                        "description": "non-surgical stone fragmentation using ultrasound waves"
-                    },
                     {
                         "name": "Contact ureterolithotripsy and nephrolithotripsy",
                         "description": "endoscopic stone fragmentation and removal through natural pathways"
@@ -138,6 +136,10 @@
                     {
                         "name": "Laparoscopic and open operations",
                         "description": "in complex or recurrent cases"
+                    },
+                    {
+                        "name": "Extracorporeal Shock Wave Lithotripsy (ESWL)",
+                        "description": "non-surgical stone fragmentation using ultrasound waves"
                     }
                 ],
                 "aftercare": "After treatment, metabolic examination is conducted to prevent stone recurrence."

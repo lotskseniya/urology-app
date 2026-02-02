@@ -122,7 +122,7 @@ export default async function ServicePage({
               </h2>
 
               {t('diagnostics.intro') && (
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-xl text-gray-700 mb-6">
                   {t('diagnostics.intro')}
                 </p>
               )}
@@ -131,13 +131,13 @@ export default async function ServicePage({
                 {diagnosticMethods.map((method: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-[#911F16] text-xl mt-1">•</span>
-                    <span className="text-gray-700">{method}</span>
+                    <span className="text-gray-700 text-xl ">{method}</span>
                   </li>
                 ))}
               </ul>
 
               {t('diagnostics.description') && (
-                <p className="text-gray-600 italic">
+                <p className="text-gray-600 text-xl  italic">
                   {t('diagnostics.description')}
                 </p>
               )}
@@ -156,7 +156,7 @@ export default async function ServicePage({
               </h2>
 
               {t('treatment.intro') && (
-                <p className="text-lg text-gray-700 mb-6">
+                <p className="text-xl  text-gray-700 mb-6">
                   {t('treatment.intro')}
                 </p>
               )}
@@ -171,13 +171,13 @@ export default async function ServicePage({
                 {treatmentMethods.map((method: string | TreatmentMethod, index: number) => (
                   <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
                     {typeof method === 'string' ? (
-                      <p className="text-gray-700">{method}</p>
+                      <p className="text-gray-700 text-xl ">{method}</p>
                     ) : (
                       <>
                         <h4 className="text-xl font-semibold text-[#911F16] mb-2">
                           {method.name}
                         </h4>
-                        <p className="text-gray-700">{method.description}</p>
+                        <p className="text-gray-700 text-xl">{method.description}</p>
                       </>
                     )}
                   </div>
@@ -193,7 +193,7 @@ export default async function ServicePage({
                     {treatmentAdvantages.map((advantage: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-green-600 text-xl">✓</span>
-                        <span className="text-gray-700">{advantage}</span>
+                        <span className="text-gray-700 text-xl">{advantage}</span>
                       </li>
                     ))}
                   </ul>
@@ -201,7 +201,7 @@ export default async function ServicePage({
               )}
 
               {t('treatment.aftercare') && (
-                <p className="text-gray-600 italic">
+                <p className="text-gray-600 text-xl italic">
                   {t('treatment.aftercare')}
                 </p>
               )}
@@ -223,22 +223,22 @@ export default async function ServicePage({
               </div>
 
               {t('prevention.intro') && (
-                <p className="text-lg text-gray-700 mb-4">
+                <p className="text-xl text-gray-700 mb-4">
                   {t('prevention.intro')}
                 </p>
               )}
 
               <ul className="space-y-2 mb-6">
                 {preventionMethods.map((method: string, index: number) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700">
-                    <span className="text-[#911F16]">-</span>
+                  <li key={index} className="flex items-start gap-3 text-gray-700 text-xl ">
+                    <span className="text-[#911F16] text-xl">-</span>
                     <span>{method}</span>
                   </li>
                 ))}
               </ul>
 
               {t('prevention.description') && (
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-xl ">
                   {t('prevention.description')}
                 </p>
               )}
@@ -260,7 +260,7 @@ export default async function ServicePage({
               </div>
 
               {t('consultation.description') && (
-                <p className="text-lg text-gray-700">
+                <p className="text-xl text-gray-700">
                   {t('consultation.description')}
                 </p>
               )}
