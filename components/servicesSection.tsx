@@ -25,25 +25,35 @@ const ServicesSection = ({ services, locale, title, subtitle }: ServicesSectionP
 
     return (
         <div>
+            {/* First service with SVG background */}
             <ServiceAccordionCard
-                preview={''} procedures={[]} image={''} {...services[0]}
-                header={title}
-                isFirst={true}
-                isExpanded={expandedId === services[0].id}
-                onToggle={() => setExpandedId(expandedId === services[0].id ? null : services[0].id)}
-                locale={locale}
-                subtitle={subtitle} />
-            {services.slice(1).map((service) => (
-                <ServiceAccordionCard
-                    preview={''} procedures={[]} image={''} key={service.id}
-                    {...service}
-                    isFirst={false}
-                    isExpanded={expandedId === service.id}
-                    onToggle={() => setExpandedId(expandedId === service.id ? null : service.id)}
-                    locale={locale} />
-            ))}
+            preview={''} procedures={[]} image={''} {...services[0]}
+            header={title} // Add this - passes "ПОСЛУГИ:" to the burgundy tab
+            isFirst={true}
+            isExpanded={expandedId === services[0].id}
+            onToggle={() => setExpandedId(expandedId === services[0].id ? null : services[0].id)}
+            locale={locale}
+            subtitle={subtitle} // Use the subtitle prop instead of hardcoded text
+            >
+                {/* Pass all other services as children */}
+                {services.slice(1).map((service) => (
+                    <ServiceAccordionCard
+                        preview={''} procedures={[]} image={''} key={service.id}
+                        {...service}
+                        isFirst={false}
+                        isExpanded={expandedId === service.id}
+                        onToggle={() => setExpandedId(expandedId === service.id ? null : service.id)}
+                        locale={locale}                    />
+                ))}
+            </ServiceAccordionCard>
+            <StatsSection/>
         </div>
     )
 }
 
 export default ServicesSection
+
+
+
+
+

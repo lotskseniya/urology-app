@@ -25,7 +25,7 @@ export default function ServicesPage() {
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="">
       <ServicesSection
         services={services}
         locale="uk" // or get from params
