@@ -23,7 +23,7 @@ const serviceTabs = [
   { slug: 'robotic-surgery', title: 'РОБОТИЗОВАНА ХІРУРГІЯ' },
   { slug: 'reproductive-organ-surgery', title: 'ОПЕРАЦІЇ НА ЗОВНІШНІХ СТАТЕВИХ ОРГАНАХ' },
   { slug: 'kidney-stone-treatment', title: 'ЛІКУВАННЯ ДОБРОЯКІСНОЇ ГІПЕРПЛАЗІЇ ПЕРЕДМІХУРОВОЇ ЗАЛОЗИ' },
-  { slug: 'endoscopic-surgery', title: 'МАЛА ХІРУРГІЯ' },
+  { slug: 'endoscopic-surgery', title: 'ЕНДОСКОПІЧНА ХІРУРГІЯ' },
 ]
 interface TreatmentMethod {
   name: string
@@ -103,7 +103,7 @@ export default async function ServicePage({
       </nav>
 
       {/* File Folder Container */}
-      <div className="container mx-auto px-4 pb-8 max-w-[90dvw]">
+      <div className="container mx-auto px-4 pb-8 max-w-6xl">
         <div className="relative">
           {/* Main file content */}
           <div
@@ -127,7 +127,7 @@ export default async function ServicePage({
 
               {/* Main Image */}
               {images[0] && (
-                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-12">
+                <div className="relative w-full h-[480px] rounded-2xl overflow-hidden mb-12">
                   <Image
                     src={images[0]}
                     alt={t('title')}
@@ -142,19 +142,19 @@ export default async function ServicePage({
               {diagnosticMethods.length > 0 && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">🔬</span>
+                    <span className="text-3xl"></span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('diagnostics.title')}
                     </h2>
                   </div>
 
-                  {t('diagnostics.intro') && (
+                  {t.has('diagnostics.intro') && t('diagnostics.intro') && (
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                       {t('diagnostics.intro')}
                     </p>
                   )}
 
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-1 mb-6">
                     {diagnosticMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-[#911F16] text-xl mt-1">-</span>
@@ -163,7 +163,7 @@ export default async function ServicePage({
                     ))}
                   </ul>
 
-                  {t('diagnostics.description') && (
+                  {t.has('diagnostics.description') && t('diagnostics.description') && (
                     <p className="text-gray-600 text-lg italic">
                       {t('diagnostics.description')}
                     </p>
@@ -175,13 +175,13 @@ export default async function ServicePage({
               {(treatmentMethods.length > 0 || treatmentDescriptions.length > 0) && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">💊</span>
+                    <span className="text-3xl"></span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('treatment.title')}
                     </h2>
                   </div>
 
-                  {t('treatment.intro') && (
+                  {t.has('treatment.intro') && t('treatment.intro') && (
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                       {t('treatment.intro')}
                     </p>
@@ -189,7 +189,7 @@ export default async function ServicePage({
 
                   {/* Treatment Descriptions (if exists) */}
                   {treatmentDescriptions.length > 0 && (
-                    <div className="mb-8 space-y-4">
+                    <div className="mb-8 space-y-2">
                       {treatmentDescriptions.map((desc: string, index: number) => (
                         <p key={index} className="text-lg text-gray-700 leading-relaxed">
                           {desc}
@@ -198,14 +198,14 @@ export default async function ServicePage({
                     </div>
                   )}
 
-                  {t('treatment.subtitle') && (
+                  {t.has('treatment.subtitle') && t('treatment.subtitle') && (
                     <h3 className="text-2xl font-semibold text-gray-800 mb-6">
                       {t('treatment.subtitle')}
                     </h3>
                   )}
 
                   {/* Treatment Methods with rich formatting */}
-                  <div className="space-y-6 mb-8">
+                  <div className="space-y-5 mb-8">
                     {treatmentMethods.map((method: string | TreatmentMethod, index: number) => {
                       if (typeof method === 'string') {
                         // Handle formatted string with bold, breaks, etc.
@@ -241,7 +241,7 @@ export default async function ServicePage({
                         <span>✓</span>
                         {tCommon('advantages')}
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1">
                         {treatmentAdvantages.map((advantage: string, index: number) => (
                           <li key={index} className="flex items-start gap-3">
                             <span className="text-green-600 text-xl flex-shrink-0">✓</span>
@@ -252,7 +252,7 @@ export default async function ServicePage({
                     </div>
                   )}
 
-                  {t('treatment.aftercare') && (
+                  {t.has('treatment.aftercare') && t('treatment.aftercare') && (
                     <p className="text-gray-600 text-lg italic">
                       {t('treatment.aftercare')}
                     </p>
@@ -280,19 +280,19 @@ export default async function ServicePage({
               {preventionMethods.length > 0 && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">🌿</span>
+                    <span className="text-3xl"></span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('prevention.title')}
                     </h2>
                   </div>
 
-                  {t('prevention.intro') && (
+                  {t.has('prevention.intro') && t('prevention.intro') && (
                     <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                       {t('prevention.intro')}
                     </p>
                   )}
 
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-1 mb-6">
                     {preventionMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-[#911F16]">-</span>
@@ -301,7 +301,7 @@ export default async function ServicePage({
                     ))}
                   </ul>
 
-                  {t('prevention.description') && (
+                  {t.has('prevention.description') && t('prevention.description') && (
                     <p className="text-gray-700 text-lg">
                       {t('prevention.description')}
                     </p>
@@ -310,16 +310,16 @@ export default async function ServicePage({
               )}
 
               {/* Consultation Section */}
-              {t('consultation.title') && (
+              {t.has('consultation.title') && t('consultation.title') && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">💬</span>
+                    <span className="text-3xl"></span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('consultation.title')}
                     </h2>
                   </div>
 
-                  {t('consultation.description') && (
+                  {t.has('consultation.description') && t('consultation.description') && (
                     <p className="text-lg text-gray-700 leading-relaxed">
                       {t('consultation.description')}
                     </p>
@@ -335,7 +335,7 @@ export default async function ServicePage({
           </div>
 
           {/* Bottom Tabs */}
-          <div className="flex justify-center gap-1 px-12">
+          <div className="flex justify-center gap-1 px-4">
             {serviceTabs.map((tab) => (
               <Link
                 key={tab.slug}
@@ -363,7 +363,6 @@ export default async function ServicePage({
     </main>
   )
 }
-
 
 
 
