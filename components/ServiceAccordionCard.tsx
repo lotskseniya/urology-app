@@ -72,50 +72,80 @@ const ServiceAccordionCard = ({
             />
           </button>
 
-          {/* Expandable content */}
           <div
             className={`
-              transition-all duration-500 ease-in-out
-              ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
-              overflow-hidden
-            `}
+                  transition-all duration-500 ease-in-out
+                  ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}
+                  overflow-hidden
+                `}
           >
-            <div className="px-8 pb-6 bg-white border-t border-gray-200">
-              <p className="text-gray-700 leading-relaxed mb-4 mt-4">{description}</p>
-              {procedures && procedures.length > 0 && (
-                <div className="space-y-3 mb-4">
-                  {procedures.map((procedure, idx) => (
-                    <div key={idx} className="border-l-4 border-[#8B3A3A] pl-4">
-                      <h5 className="font-bold text-gray-900 mb-1">
-                        {procedure.name}
-                      </h5>
-                      <p className="text-sm text-gray-600">
-                        {procedure.description}
-                      </p>
+            <div className="px-8 pb-6 bg-white border-t border-gray-200 mt-0">
+              <div className="py-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Image - properly implemented */}
+                  {image && (
+                    <div className="relative h-64 lg:h-80 rounded-2xl overflow-hidden bg-gray-200">
+                      <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </div>
-                  ))}
+                  )}
+
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <p className="text-gray-700 leading-relaxed mb-3">
+                        {preview}
+                      </p>
+                      <p className="text-gray-700 leading-relaxed mb-3">
+                        {description}
+                      </p>
+
+                      {procedures && procedures.length > 0 && (
+                        <div className="space-y-4">
+                          <h4 className="font-bold text-[#8B3A3A] text-lg mb-4">
+                            {performedInDepartment}
+                          </h4>
+                          {procedures.map((procedure, idx) => (
+                            <div key={idx} className="border-l-4 border-[#8B3A3A] pl-4">
+                              <h5 className="font-bold text-gray-900 mb-1">
+                                {procedure.name}
+                              </h5>
+                              <p className="text-sm text-gray-600">
+                                {procedure.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    <Link
+                      href={`/${locale}/services/${slug}`}
+                      className="
+                            mt-6 inline-flex items-center justify-center gap-2
+                            px-6 py-3 bg-[#911F16] text-white rounded-full
+                            hover:bg-[#6B2A2A] transition-colors duration-300
+                            font-medium self-start
+                          "
+                    >
+                      {t('learnMore')}
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M7 3L14 10L7 17"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
-              )}
-              <Link
-                href={`/${locale}/services/${slug}`}
-                className="
-                  inline-flex items-center justify-center gap-2
-                  px-6 py-3 bg-[#911F16] text-white rounded-full
-                  hover:bg-[#6B2A2A] transition-colors duration-300
-                  font-medium
-                "
-              >
-                {t('learnMore')}
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M7 3L14 10L7 17"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

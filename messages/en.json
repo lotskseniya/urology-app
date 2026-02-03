@@ -45,10 +45,35 @@
                 "id": "laparoscopic",
                 "title": "LAPAROSCOPIC SURGERY",
                 "slug": "laparoscopic-surgery",
-                "preview": "High-precision laparoscopic operations with minimal recovery period.",
-                "description": "Modern laparoscopic methods allow performing complex operations through small incisions.",
-                "procedures": [],
-                "image": ""
+                "preview": "High-precision and minimally traumatic method of treating pathologies of the kidneys, adrenal glands, ureters, bladder and prostate gland",
+                "description": "Provides high accuracy, minimal trauma and rapid recovery",
+                "procedures": [
+                    {
+                        "name": "Laparoscopic kidney surgery:",
+                        "description": "Laparoscopic nephrectomy (kidney removal); partial nephrectomy (resection of the kidney); nephroureterectomy; pyeloplasty; nephropexy; renal cystectomy"
+                    },
+                    {
+                        "name": "Laparoscopic adrenal surgery:",
+                        "description": "Laparoscopic adrenalectomy (removal of one or both adrenal glands);"
+                    },
+                    {
+                        "name": "Laparoscopic Ureteral Surgery:",
+                        "description": "Laparoscopic Ureterolysis; Ureteroneoanastomosis; Ureteral Reimplantation into the Bladder;"
+                    },
+                    {
+                        "name": "Laparoscopic Bladder Surgery:",
+                        "description": "Laparoscopic cystectomy; laparoscopic bladder reconstruction; bladder diverticulum removal"
+                    },
+                    {
+                        "name": "Laparoscopic Prostate Surgery:",
+                        "description": "Laparoscopic Radical Prostatectomy; Adenomectomy;"
+                    },
+                    {
+                        "name": "Other laparoscopic urological procedures:",
+                        "description": "Laparoscopic lymphadenectomy; Laparoscopic transposition of vessels for compression syndromes; Laparoscopic varicocelectomy (through the peritoneum)"
+                    }
+                ],
+                "image": "/images/services/laparoscopy-1.jpg"
             },
             {
                 "id": "endoscopic-surgery",
@@ -164,40 +189,7 @@
                 "/images/services/urolithiasis-3.png"
             ]
         },
-        "endoskopichna-urologiya": {
-            "title": "Endoscopic Urology",
-            "subtitle": "Modern minimally invasive methods for diagnosis and treatment of urological diseases using endoscopic equipment.",
-            "diagnostics": {
-                "title": "Diagnostic Procedures:",
-                "methods": [
-                    "Cystoscopy – bladder examination",
-                    "Ureteroscopy – ureter examination",
-                    "Nephroscopy – kidney examination"
-                ]
-            },
-            "treatment": {
-                "title": "Treatment Procedures:",
-                "methods": [
-                    {
-                        "name": "Transurethral resection (TUR)",
-                        "description": "removal of bladder and prostate tumors"
-                    },
-                    {
-                        "name": "Contact lithotripsy",
-                        "description": "stone fragmentation under endoscopic control"
-                    },
-                    {
-                        "name": "Ureteral stenting",
-                        "description": "restoration of urine outflow"
-                    }
-                ]
-            },
-            "images": [
-                "/images/services/endoscopy-1.jpg",
-                "/images/services/endoscopy-2.jpg"
-            ]
-        },
-        "laparoskopichni-operatsiyi": {
+        "laparoscopic-surgery": {
             "title": "Laparoscopic Operations",
             "subtitle": "Minimally invasive surgery through small incisions using a video camera and specialized instruments.",
             "treatment": {
@@ -232,7 +224,40 @@
                 "/images/services/laparoscopy-2.jpg"
             ]
         },
-        "onkourologiya": {
+        "endoscopic-surgery": {
+            "title": "Endoscopic Urology",
+            "subtitle": "Modern minimally invasive methods for diagnosis and treatment of urological diseases using endoscopic equipment.",
+            "diagnostics": {
+                "title": "Diagnostic Procedures:",
+                "methods": [
+                    "Cystoscopy – bladder examination",
+                    "Ureteroscopy – ureter examination",
+                    "Nephroscopy – kidney examination"
+                ]
+            },
+            "treatment": {
+                "title": "Treatment Procedures:",
+                "methods": [
+                    {
+                        "name": "Transurethral resection (TUR)",
+                        "description": "removal of bladder and prostate tumors"
+                    },
+                    {
+                        "name": "Contact lithotripsy",
+                        "description": "stone fragmentation under endoscopic control"
+                    },
+                    {
+                        "name": "Ureteral stenting",
+                        "description": "restoration of urine outflow"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/endoscopy-1.jpg",
+                "/images/services/endoscopy-2.jpg"
+            ]
+        },
+        "cancer-treatment": {
             "title": "Oncourology",
             "subtitle": "Comprehensive diagnosis and treatment of malignant tumors of the genitourinary system.",
             "diagnostics": {
@@ -271,7 +296,7 @@
                 "/images/services/oncology-2.jpg"
             ]
         },
-        "zhinocha-urologiya": {
+        "mens-and-womens-health": {
             "title": "Female Urology",
             "subtitle": "Specialized care for women with urological conditions.",
             "treatment": {
