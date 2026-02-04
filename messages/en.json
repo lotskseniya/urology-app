@@ -76,18 +76,9 @@
                 "image": "/images/services/laparoscopy-1.jpg"
             },
             {
-                "id": "endoscopic-surgery",
-                "title": "ENDOSCOPIC SURGERY",
-                "slug": "endoscopic-surgery",
-                "preview": "Modern minimally invasive methods for treating urological diseases.",
-                "description": "We use the most advanced minimally invasive surgery techniques for rapid recovery and minimal discomfort.",
-                "procedures": [],
-                "image": ""
-            },
-            {
                 "id": "reproductive-surgery",
                 "title": "REPRODUCTIVE ORGAN SURGERY",
-                "slug": "reproductive-organ-surgery",
+                "slug": "reproductive-surgery",
                 "preview": "Delicate reproductive organ surgeries using modern techniques.",
                 "description": "Professional approach to surgical treatment of reproductive organ diseases.",
                 "procedures": [],
@@ -97,8 +88,17 @@
                 "id": "robotic-surgery",
                 "title": "ROBOTIC SURGERY",
                 "slug": "robotic-surgery",
-                "preview": "State-of-the-art robotic systems for maximum surgical precision.",
-                "description": "Utilization of Da Vinci robotic systems for high-precision operations.",
+                "preview": "The newest and the most progressive robotic systems for maximum surgical precision.",
+                "description": "We use Da Vinci robotic systems for high-precision operations.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "endoscopic-surgery",
+                "title": "ENDOSCOPIC SURGERY",
+                "slug": "endoscopic-surgery",
+                "preview": "Modern minimally invasive methods for treating urological diseases.",
+                "description": "We use the most advanced minimally invasive surgery techniques for rapid recovery and minimal discomfort.",
                 "procedures": [],
                 "image": ""
             },
@@ -131,7 +131,9 @@
     "servicePages": {
         "kidney-stone-treatment": {
             "title": "Urolithiasis Treatment",
-            "subtitle": "Urolithiasis is one of the most common urological diseases, arising from the formation of stones (calculi) in the kidneys, ureters, or bladder.",
+            "subtitle": [
+                "Urolithiasis is one of the most common urological diseases, arising from the formation of stones (calculi) in the kidneys, ureters, or bladder."
+            ],
             "diagnostics": {
                 "title": "Diagnostics:",
                 "intro": "For accurate diagnosis, we use:",
@@ -191,7 +193,9 @@
         },
         "laparoscopic-surgery": {
             "title": "Laparoscopic Surgery",
-            "subtitle": "Laparoscopic operations are minimally invasive surgical interventions performed through several small punctures (5–10 mm) in the abdominal wall using special instruments and a video camera (laparoscope). The image of internal organs is transmitted to a monitor, allowing the surgeon to perform the operation without a large incision.",
+            "subtitle": [
+                "Laparoscopic operations are minimally invasive surgical interventions performed through several small punctures (5–10 mm) in the abdominal wall using special instruments and a video camera (laparoscope). The image of internal organs is transmitted to a monitor, allowing the surgeon to perform the operation without a large incision."
+            ],
             "diagnostics": {
                 "title": "Advantages of laparoscopic operations over open ones:",
                 "methods": [
@@ -235,9 +239,61 @@
                 "/images/services/laparoscopy-5.png"
             ]
         },
+        "reproductive-surgery": {
+            "title": "REPRODUCTIVE ORGAN SURGERIES",
+            "subtitle": [
+                "Urology is not only about complex operations and long-term treatment.",
+                "Today, many male and female health problems can be solved quickly, painlessly and without the need for hospitalization.",
+                "Our department performs a wide range of quick, minimally invasive procedures that significantly improve quality of life.",
+                "After them, the patient can usually return home the same day.",
+                "Such interventions are aimed at eliminating functional or aesthetic problems, improving hygiene and preventing complications in the future.",
+                "In particular, doctors of our department perform procedures that will help you get rid of such problems as:"
+            ],
+            "diagnostics": {
+                "title": "",
+                "methods": [
+                    "*Phimosis* – narrowing of the foreskin (treatment – circumcision);",
+                    "*Small skin or mucosal growths* (papillomas, condylomas, etc.);",
+                    "*Short penile frenulum;*",
+                    "*Spermatic cord or scrotal cyst;*",
+                    "*Hydrocele* (testicular dropsy);"
+                ],
+                "description": [
+                    "*How does the procedure work?*",
+                    "1. Consultation with a urologist, during which the need for intervention is determined.",
+                    "2. Tests and examinations (if needed).",
+                    "3. The operation itself.",
+                    "4. Observation after the procedure and discharge.",
+                    "5. Follow-up examination in a few days."
+                ]
+            },
+            "treatment": {
+                "title": "Frequently Asked Questions:",
+                "description": [
+                    "*Is it painful?*</br>No. Local anesthesia or general anesthesia is used – you do not feel pain during the intervention.",
+                    "*Do scars remain?*</br>Scars after minor surgery are usually inconspicuous or minimal.",
+                    "*Do I need to prepare for the procedure?*</br>The doctor will provide clear individual recommendations before the intervention."
+                ],
+                "methods": [
+                    "**1. Circumcision: when it's needed, how it works, what to expect:**</br>Circumcision is the surgical removal of the foreskin (the skin fold covering the glans of the penis).</br>This is one of the most common and safe urological procedures, which can be performed for medical, hygienic or cultural reasons.</br>*Main indications for circumcision:*</br>-Phimosis – narrowing of the foreskin that prevents full opening of the penis glans</br>-Paraphimosis – pinching of the foreskin behind the glans (emergency condition);</br>-Chronic inflammation (balanoposthitis) that does not respond to medical treatment;</br>-Prevention of urogenital infections (especially with frequent recurrences);</br>-Hygienic or religious considerations;</br>-Problems during sexual life due to short frenulum or phimosis</br></br>*What types of circumcision exist?*</br>Depending on tissue condition, patient age and preferences, the doctor may suggest one of the operation variants:</br>*1. Complete circumcision*</br>All foreskin is removed, glans remains fully exposed. Most commonly used for phimosis.</br>*2. Partial circumcision*</br>Only part of the foreskin is removed, glans remains partially covered. Used less often, mainly for aesthetic reasons.</br>*3. Classic surgical technique (scalpel)*</br>Performed using scalpel or scissors under local anesthesia. Most common method.</br>*4. Circumcision using radiowave knife*</br>Modern, minimally traumatic technique. Less bleeding, less swelling, faster healing.</br>*5. Circumcision with or without sutures*</br>In some cases, special techniques are used that do not require sutures (for example, using a clamp or ring in children)</br></br>*Benefits of circumcision:*</br>-Improved hygiene</br>-Reduced risk of infections</br>-Facilitation of sexual life (with phimosis, short frenulum)</br>-Prevention of certain diseases (for example, reduced risk of HPV and HIV in some studies)</br>-Aesthetic effect (upon patient request)</br></br>*Recovery after surgery*</br>-First 1–3 days – possible swelling, slight discomfort</br>-Painkillers and antiseptic agents are prescribed</br>-Hygiene – daily treatments as recommended by doctor</br>-Suture removal (if not self-dissolving) – usually on day 7–10</br>-Return to sexual life – approximately after 3–4 weeks</br></br>*Frequently asked questions:*</br>*At what age is it better to do circumcision?*</br>The procedure can be performed in both childhood and adulthood. In adults – more often for medical reasons.</br></br>*Does circumcision affect sexual life?*</br>Yes, but usually positively – discomfort and pain decrease, confidence increases. Sensitivity may change slightly, but this usually does not reduce the quality of sexual life.",
+                    "**2. Removal of condylomas and papillomas:**</br>Condylomas and papillomas are benign growths that appear as a result of viral infection. They can cause discomfort and psychological stress.</br>Removal of such growths is carried out using modern technologies – laser or radiowave method. The procedure is safe, painless and leaves no noticeable traces.",
+                    "**3. Penile plastic surgery:**</br>Plastic surgery is performed for curvature, trauma consequences or aesthetic indications.</br>Modern methods allow correcting shape, restoring symmetry and improving the appearance of the penis while preserving all its natural functions.</br>Such operations help not only physically but also psychologically – returning confidence to a man, and in complex cases, allowing a return to comfortable and quality sexual life.",
+                    "**4. Treatment of testicular hydrocele (hydrocele)**</br>Testicular hydrocele is an accumulation of fluid in the testicular membranes, causing the scrotum to increase in size, with possible feelings of heaviness or discomfort.</br>Modern minor surgery allows safe removal of hydrocele, restoring normal appearance and well-being. After the intervention, the patient recovers quickly and returns to normal life within a few days.",
+                    "**5. Testicular prosthetics**</br>In case of testicular absence (after trauma, surgery or congenital defects), installation of a special prosthesis is possible.</br>This procedure is mainly aesthetic in nature and helps restore scrotal symmetry."
+                ],
+                "advantages": [
+                    "Want to learn more or schedule a procedure? - Fill out the form below - and we will contact you for a consultation",
+                    "We maintain complete confidentiality.",
+                    "Trust your health to an experienced urologist."
+                ]
+            },
+            "images": []
+        },
         "endoscopic-surgery": {
             "title": "Endoscopic Urology",
-            "subtitle": "Modern minimally invasive methods for diagnosis and treatment of urological diseases using endoscopic equipment.",
+            "subtitle": [
+                "Modern minimally invasive methods for diagnosis and treatment of urological diseases using endoscopic equipment."
+            ],
             "diagnostics": {
                 "title": "Diagnostic Procedures:",
                 "methods": [
@@ -266,6 +322,35 @@
             "images": [
                 "/images/services/endoscopy-1.jpg",
                 "/images/services/endoscopy-2.jpg"
+            ]
+        },
+        "mens-and-womens-health": {
+            "title": "Female Urology",
+            "subtitle": "Specialized care for women with urological conditions.",
+            "treatment": {
+                "title": "Main Directions:",
+                "methods": [
+                    {
+                        "name": "Treatment of urinary incontinence",
+                        "description": "conservative and surgical"
+                    },
+                    {
+                        "name": "Pelvic organ prolapse",
+                        "description": "reconstructive operations"
+                    },
+                    {
+                        "name": "Recurrent infections",
+                        "description": "diagnosis and prevention"
+                    },
+                    {
+                        "name": "Chronic pain syndrome",
+                        "description": "comprehensive therapy"
+                    }
+                ]
+            },
+            "images": [
+                "/images/services/female-urology-1.jpg",
+                "/images/services/female-urology-2.jpg"
             ]
         },
         "cancer-treatment": {
@@ -307,40 +392,11 @@
                 "/images/services/oncology-2.jpg"
             ]
         },
-        "mens-and-womens-health": {
-            "title": "Female Urology",
-            "subtitle": "Specialized care for women with urological conditions.",
+        "robotic-surgery": {
+            "title": "ROBOTIC SURGERY",
+            "subtitle": "The newest and the most progressive robotic systems for maximum surgical precision",
             "treatment": {
-                "title": "Main Directions:",
-                "methods": [
-                    {
-                        "name": "Treatment of urinary incontinence",
-                        "description": "conservative and surgical"
-                    },
-                    {
-                        "name": "Pelvic organ prolapse",
-                        "description": "reconstructive operations"
-                    },
-                    {
-                        "name": "Recurrent infections",
-                        "description": "diagnosis and prevention"
-                    },
-                    {
-                        "name": "Chronic pain syndrome",
-                        "description": "comprehensive therapy"
-                    }
-                ]
-            },
-            "images": [
-                "/images/services/female-urology-1.jpg",
-                "/images/services/female-urology-2.jpg"
-            ]
-        },
-        "nevidkladna-urologiya": {
-            "title": "Emergency Urology",
-            "subtitle": "24/7 emergency care for acute urological conditions.",
-            "treatment": {
-                "title": "Emergency Conditions:",
+                "title": "We use Da Vinci robotic systems for high-precision operations",
                 "methods": [
                     {
                         "name": "Acute urinary retention",

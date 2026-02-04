@@ -12,33 +12,37 @@ const validSlugs = [
   'robotic-surgery',
   'cancer-treatment',
   'mens-and-womens-health',
-  'reproductive-organ-surgery'
+  'reproductive-surgery'
 ] as const
 
-// Service tabs for bottom bookmarks
 const serviceTabs = [
-  { slug: 'mens-and-womens-health', title: 'ЧОЛОВІЧЕ ТА ЖІНОЧЕ ЗДОРОВ\'Я' },
   { slug: 'laparoscopic-surgery', title: 'ЛАПАРОСКОПІЧНА ХІРУРГІЯ' },
+  { slug: 'endoscopic-surgery', title: 'ЕНДОСКОПІЧНА ХІРУРГІЯ' },
+  { slug: 'reproductive-surgery', title: 'ОПЕРАЦІЇ НА СТАТЕВИХ ОРГАНАХ' },
+  { slug: 'kidney-stone-treatment', title: 'ЛІКУВАННЯ СЕЧОКАМ\'ЯНОЇ ХВОРОБИ' },
   { slug: 'cancer-treatment', title: 'ЛІКУВАННЯ РАКУ' },
   { slug: 'robotic-surgery', title: 'РОБОТИЗОВАНА ХІРУРГІЯ' },
-  { slug: 'reproductive-organ-surgery', title: 'ОПЕРАЦІЇ НА ЗОВНІШНІХ СТАТЕВИХ ОРГАНАХ' },
-  { slug: 'kidney-stone-treatment', title: 'ЛІКУВАННЯ ДОБРОЯКІСНОЇ ГІПЕРПЛАЗІЇ ПЕРЕДМІХУРОВОЇ ЗАЛОЗИ' },
-  { slug: 'endoscopic-surgery', title: 'ЕНДОСКОПІЧНА ХІРУРГІЯ' },
+  { slug: 'mens-and-womens-health', title: 'ЧОЛОВІЧЕ ТА ЖІНОЧЕ ЗДОРОВ\'Я' },
 ]
+
 interface TreatmentMethod {
   name: string
   description: string
 }
 
-// Helper to parse formatted text with bold and line breaks
 function parseFormattedText(text: string) {
-  // Replace **text** with bold
   const withBold = text.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#911F16]">$1</strong>')
-  // Replace *text* with bold
   const withAsteriskBold = withBold.replace(/\*(.*?)\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
-  // Replace </br> with line breaks
   const withBreaks = withAsteriskBold.replace(/<\/br>/g, '<br />')
-  return withBreaks
+  const withNewlines = withBreaks.replace(/\n/g, '<br />') // Add newline support
+  return withNewlines
+}
+
+// Helper to check if translation exists and is not a key
+function hasValidTranslation(value: string | undefined | null): boolean {
+  if (!value) return false
+  if (typeof value !== 'string') return false
+  return !value.startsWith('servicePages.') && value.trim().length > 0
 }
 
 export function generateStaticParams() {
@@ -82,14 +86,64 @@ export default async function ServicePage({
 
   const images = getArrayData('images')
   const diagnosticMethods = getArrayData('diagnostics.methods')
+  const diagnosticsDescription = getArrayData('diagnostics.description')
   const preventionMethods = getArrayData('prevention.methods')
   const treatmentMethods = getTreatmentMethods()
   const treatmentAdvantages = getArrayData('treatment.advantages')
   const treatmentDescriptions = getArrayData('treatment.description')
+  const subtitleArray = getArrayData('subtitle') // Get subtitle as array
+
+  // Safe translation getters
+  const subtitle = (() => {
+    try {
+      return t('subtitle')
+    } catch {
+      return ''
+    }
+  })()
+
+  const diagnosticsTitle = (() => {
+    try {
+      return t('diagnostics.title')
+    } catch {
+      return ''
+    }
+  })()
+
+  const diagnosticsIntro = (() => {
+    try {
+      return t('diagnostics.intro')
+    } catch {
+      return ''
+    }
+  })()
+
+  const treatmentTitle = (() => {
+    try {
+      return t('treatment.title')
+    } catch {
+      return ''
+    }
+  })()
+
+  const treatmentSubtitle = (() => {
+    try {
+      return t('treatment.subtitle')
+    } catch {
+      return ''
+    }
+  })()
+
+  const treatmentAdditional = (() => {
+    try {
+      return t('treatment.additional')
+    } catch {
+      return ''
+    }
+  })()
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F3EF' }}>
-      {/* Navigation */}
       <nav className="w-full py-6" style={{ backgroundColor: '#F5F3EF' }}>
         <div className="container mx-auto px-4 pt-20">
           <Link
@@ -102,10 +156,8 @@ export default async function ServicePage({
         </div>
       </nav>
 
-      {/* File Folder Container */}
-      <div className="container mx-auto px-4 pb-8 max-w-6xl">
+      <div className="container mx-auto px-4 pb-8 max-w-[90dvw]">
         <div className="relative">
-          {/* Main file content */}
           <div
             className="relative rounded-3xl shadow-2xl overflow-hidden"
             style={{
@@ -115,15 +167,25 @@ export default async function ServicePage({
             }}
           >
             <div className="p-12">
-              {/* Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#8B1E1E' }}>
                 {t('title')}
               </h1>
 
-              {/* Subtitle */}
-              <p className="text-lg text-gray-600 mb-8">
-                {t('subtitle')}
-              </p>
+              {/* Subtitle - supports both string and array format */}
+              {subtitleArray.length > 0 ? (
+                // Array format: multiple paragraphs
+                <div className="text-lg text-gray-600 mb-8 leading-relaxed space-y-1">
+                  {subtitleArray.map((paragraph: string, index: number) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              ) : hasValidTranslation(subtitle) ? (
+                // String format: single paragraph
+                <div
+                  className="text-lg text-gray-600 mb-8 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: parseFormattedText(subtitle) }}
+                />
+              ) : null}
 
               {/* Main Image */}
               {images[0] && (
@@ -139,78 +201,71 @@ export default async function ServicePage({
               )}
 
               {/* Diagnostics Section */}
-              {diagnosticMethods.length > 0 && (
+              {diagnosticMethods.length > 0 && hasValidTranslation(diagnosticsTitle) && (
                 <section className="mb-12">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl"></span>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {t('diagnostics.title')}
-                    </h2>
-                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    {diagnosticsTitle}
+                  </h2>
 
-                  {t.has('diagnostics.intro') && t('diagnostics.intro') && (
+                  {hasValidTranslation(diagnosticsIntro) && (
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      {t('diagnostics.intro')}
+                      {diagnosticsIntro}
                     </p>
                   )}
 
-                  <ul className="space-y-1 mb-6">
+                  <ul className="space-y-2 mb-6">
                     {diagnosticMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-[#911F16] text-xl mt-1">-</span>
-                        <span className="text-gray-700 text-lg">{method}</span>
+                        <div
+                          className="text-gray-700 text-lg flex-1"
+                          dangerouslySetInnerHTML={{ __html: parseFormattedText(method) }}
+                        />
                       </li>
                     ))}
                   </ul>
 
-                  {t.has('diagnostics.description') && t('diagnostics.description') && (
-                    <p className="text-gray-600 text-lg italic">
-                      {t('diagnostics.description')}
-                    </p>
+                  {diagnosticsDescription.length > 0 && (
+                    <div className="space-y-2 my-6">
+                      {diagnosticsDescription.map((data: string, index: number) => (
+                        <div key={index} className="text-gray-700 text-lg">
+                          <div dangerouslySetInnerHTML={{ __html: parseFormattedText(data) }} />
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </section>
               )}
 
               {/* Treatment Section */}
-              {(treatmentMethods.length > 0 || treatmentDescriptions.length > 0) && (
+              {(treatmentMethods.length > 0 || treatmentDescriptions.length > 0) && hasValidTranslation(treatmentTitle) && (
                 <section className="mb-12">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl"></span>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {t('treatment.title')}
-                    </h2>
-                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    {treatmentTitle}
+                  </h2>
 
-                  {t.has('treatment.intro') && t('treatment.intro') && (
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      {t('treatment.intro')}
-                    </p>
-                  )}
-
-                  {/* Treatment Descriptions (if exists) */}
                   {treatmentDescriptions.length > 0 && (
-                    <div className="mb-8 space-y-2">
+                    <div className="mb-8 space-y-3">
                       {treatmentDescriptions.map((desc: string, index: number) => (
-                        <p key={index} className="text-lg text-gray-700 leading-relaxed">
-                          {desc}
-                        </p>
+                        <div
+                          key={index}
+                          className="text-lg text-gray-700 leading-relaxed"
+                          dangerouslySetInnerHTML={{ __html: parseFormattedText(desc) }}
+                        />
                       ))}
                     </div>
                   )}
 
-                  {t.has('treatment.subtitle') && t('treatment.subtitle') && (
+                  {hasValidTranslation(treatmentSubtitle) && (
                     <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                      {t('treatment.subtitle')}
+                      {treatmentSubtitle}
                     </h3>
                   )}
 
-                  {/* Treatment Methods with rich formatting */}
-                  <div className="space-y-5 mb-8">
+                  <div className="space-y-6 mb-8">
                     {treatmentMethods.map((method: string | TreatmentMethod, index: number) => {
                       if (typeof method === 'string') {
-                        // Handle formatted string with bold, breaks, etc.
                         const formattedText = parseFormattedText(method)
-
                         return (
                           <div
                             key={index}
@@ -219,7 +274,6 @@ export default async function ServicePage({
                           />
                         )
                       } else {
-                        // Handle object format
                         return (
                           <div key={index} className="bg-gray-50 p-6 rounded-xl border-l-4 border-[#8B1E1E]">
                             <h4 className="text-lg font-bold text-[#911F16] mb-2">
@@ -235,27 +289,27 @@ export default async function ServicePage({
                     })}
                   </div>
 
+                  {/* Only show additional if it has valid content */}
+                  {hasValidTranslation(treatmentAdditional) && (
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                      {treatmentAdditional}
+                    </p>
+                  )}
+
                   {treatmentAdvantages.length > 0 && (
                     <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-600 mb-6">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                        <span>✓</span>
-                        {tCommon('advantages')}
-                      </h4>
-                      <ul className="space-y-1">
+                      <ul className="space-y-2">
                         {treatmentAdvantages.map((advantage: string, index: number) => (
                           <li key={index} className="flex items-start gap-3">
                             <span className="text-green-600 text-xl flex-shrink-0">✓</span>
-                            <span className="text-gray-700 text-lg">{advantage}</span>
+                            <div
+                              className="text-gray-700 text-lg flex-1"
+                              dangerouslySetInnerHTML={{ __html: parseFormattedText(advantage) }}
+                            />
                           </li>
                         ))}
                       </ul>
                     </div>
-                  )}
-
-                  {t.has('treatment.aftercare') && t('treatment.aftercare') && (
-                    <p className="text-gray-600 text-lg italic">
-                      {t('treatment.aftercare')}
-                    </p>
                   )}
                 </section>
               )}
@@ -280,19 +334,13 @@ export default async function ServicePage({
               {preventionMethods.length > 0 && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl"></span>
+                    <span className="text-3xl">🌿</span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('prevention.title')}
                     </h2>
                   </div>
 
-                  {t.has('prevention.intro') && t('prevention.intro') && (
-                    <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                      {t('prevention.intro')}
-                    </p>
-                  )}
-
-                  <ul className="space-y-1 mb-6">
+                  <ul className="space-y-2 mb-6">
                     {preventionMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-[#911F16]">-</span>
@@ -300,34 +348,9 @@ export default async function ServicePage({
                       </li>
                     ))}
                   </ul>
-
-                  {t.has('prevention.description') && t('prevention.description') && (
-                    <p className="text-gray-700 text-lg">
-                      {t('prevention.description')}
-                    </p>
-                  )}
                 </section>
               )}
 
-              {/* Consultation Section */}
-              {t.has('consultation.title') && t('consultation.title') && (
-                <section className="mb-12">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl"></span>
-                    <h2 className="text-3xl font-bold text-gray-900">
-                      {t('consultation.title')}
-                    </h2>
-                  </div>
-
-                  {t.has('consultation.description') && t('consultation.description') && (
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      {t('consultation.description')}
-                    </p>
-                  )}
-                </section>
-              )}
-
-              {/* CTA Button */}
               <div className="flex justify-center mt-12">
                 <BookVisitBtn />
               </div>
@@ -335,7 +358,7 @@ export default async function ServicePage({
           </div>
 
           {/* Bottom Tabs */}
-          <div className="flex justify-center gap-1 px-4">
+          <div className="flex justify-center gap-1 px-4 h-[70px]">
             {serviceTabs.map((tab) => (
               <Link
                 key={tab.slug}
@@ -363,12 +386,3 @@ export default async function ServicePage({
     </main>
   )
 }
-
-
-
-
-
-
-// import BookVisitBtn from "@/components/BookVisitBtn"
-
-// <BookVisitBtn />
