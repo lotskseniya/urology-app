@@ -324,6 +324,51 @@
                 "/images/services/endoscopy-2.jpg"
             ]
         },
+        "robotic-surgery": {
+            "title": "ROBOTIC SURGERY",
+            "subtitle": "The most advanced robotic systems for maximum surgical precision.",
+            "diagnostics": {
+                "title": " ",
+                "methods": [
+                    "Robotic surgery allows doctors to perform many types of complex procedures with greater precision and control than is possible with traditional procedures.",
+                    "Such surgery is often performed through tiny incisions. But sometimes it is also used in open operations.",
+                    "</br></br>Typically, a robotic surgery system includes an arm with a camera and mechanical arms with surgical instruments attached to them.",
+                    "The surgeon necessarily controls the robot's arms while sitting at a console near the operating table. And thanks to the high clarity and 3D projection of the area where the surgical intervention is performed, the surgeon sees a clear and magnified intervention area.",
+                    "</br></br>In our work, we use the da Vinci Surgical System robot."
+                ]
+            },
+            "treatment": {
+                "title": "What is the da Vinci robot and how is it used:",
+                "description": [
+                    "The da Vinci surgical robot is an alternative surgical method to laparoscopic procedures and is gaining increasing popularity among hospitals around the world since it was officially approved by the FDA (Food and Drug Administration - whose certification is considered a key global quality standard) in America in 2000.",
+                    "</br></br>The robot is designed for minimally invasive surgery in procedures including urological, laparoscopic and other surgical procedures.",
+                    "Some examples of urological diseases in which the robot can be chosen instead of an alternative procedure, laparoscopic surgery, include:"
+                ],
+                "methods": [
+                    " - *Kidney disorders* (kidney stones; acute kidney injury; pyelonephritis; chronic kidney disease; glomerulonephritis and others);",
+                    " - *Prostate hyperplasia*;",
+                    " - *Kidney cancer*;"
+                ],
+                "advantages": [
+                    " - Fewer complications such as infection.",
+                    " - Less likelihood of pain and blood loss.",
+                    " - Shorter hospital stay and faster recovery.",
+                    " - Smaller or less noticeable scars."
+                ]
+            },
+            "prevention": {
+                "title": " ",
+                "intro": " ",
+                "methods": [
+                    "Like any surgical intervention, robotic surgery is associated with risks similar to those of traditional open surgery, such as a small risk of infection or other complications.",
+                    "Therefore, to determine whether robotic surgery is right for you, you will receive a consultation from our doctor about the benefits and risks of robotic surgery and which treatment method is best to choose in your particular case."
+                ],
+                "description": " "
+            },
+            "images": [
+                "/images/services/robotic-1.png"
+            ]
+        },
         "mens-and-womens-health": {
             "title": "Female Urology",
             "subtitle": "Specialized care for women with urological conditions.",
@@ -390,38 +435,6 @@
             "images": [
                 "/images/services/oncology-1.jpg",
                 "/images/services/oncology-2.jpg"
-            ]
-        },
-        "robotic-surgery": {
-            "title": "ROBOTIC SURGERY",
-            "subtitle": "The newest and the most progressive robotic systems for maximum surgical precision",
-            "treatment": {
-                "title": "We use Da Vinci robotic systems for high-precision operations",
-                "methods": [
-                    {
-                        "name": "Acute urinary retention",
-                        "description": "catheterization, epicystostomy"
-                    },
-                    {
-                        "name": "Renal colic",
-                        "description": "pain relief, stenting"
-                    },
-                    {
-                        "name": "Genitourinary trauma",
-                        "description": "conservative and surgical treatment"
-                    },
-                    {
-                        "name": "Testicular torsion",
-                        "description": "emergency surgery"
-                    },
-                    {
-                        "name": "Bleeding",
-                        "description": "hemostasis, tamponade"
-                    }
-                ]
-            },
-            "images": [
-                "/images/services/emergency-1.jpg"
             ]
         }
     },

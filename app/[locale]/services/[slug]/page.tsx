@@ -334,7 +334,7 @@ export default async function ServicePage({
               {preventionMethods.length > 0 && (
                 <section className="mb-12">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl">🌿</span>
+                    <span className="text-3xl"></span>
                     <h2 className="text-3xl font-bold text-gray-900">
                       {t('prevention.title')}
                     </h2>
