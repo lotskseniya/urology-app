@@ -30,7 +30,7 @@ const TeamSection = () => {
     name: t(`members.${id}.name`),
     surname: t(`members.${id}.surname`),
     photo: t(`members.${id}.photo`),
-    position: t(`members.${id}.position`),
+    position: t.raw(`members.${id}.position`),
     experienceSince: t.raw(`members.${id}.experienceSince`),
     timeline: t.raw(`members.${id}.timeline`),
     fields: t.raw(`members.${id}.fields`),
@@ -39,7 +39,8 @@ const TeamSection = () => {
   }))
 
   // Start with card index 1 (member2) so we show member1, member2, member3 with member2 centered
-  const [currentIndex, setCurrentIndex] = useState(1)
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [expandedMembers, setExpandedMembers] = useState<Record<string, boolean>>({});
 
   const scrollToIndex = (index: number) => {
     if (!scrollContainerRef.current) return
@@ -99,12 +100,19 @@ const TeamSection = () => {
     }
   }, [members.length])
 
+  const toggleExpanded = (memberId: string) => {
+    setExpandedMembers(prev => ({
+      ...prev,
+      [memberId]: !prev[memberId]
+    }));
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="py-10 md:py-22 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {t('title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -126,7 +134,7 @@ const TeamSection = () => {
           {/* Scrollable Cards Container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-8"
+            className="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-6"
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none',
@@ -139,17 +147,21 @@ const TeamSection = () => {
                 <div
                   key={member.id}
                   className={`flex-shrink-0 snap-center transition-all duration-500 ${isCenter
-                      ? 'scale-105 z-10'
-                      : 'scale-95 opacity-80'
+                    ? 'scale-102 z-10'
+                    : 'scale-95 opacity-80'
                     }`}
                   style={{
                     width: '480px',
+                    height: `${isCenter
+                    ? 'auto'
+                    : '60rem'
+                    }`
                   }}
                   onClick={() => scrollToIndex(index)}
                 >
                   <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full cursor-pointer hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
                     {/* Photo with overlays */}
-                    <div className={`relative overflow-hidden bg-gray-200 transition-all duration-500 ${isCenter ? 'h-96' : 'h-80'
+                    <div className={`relative overflow-hidden bg-gray-200 transition-all duration-500 ${isCenter ? 'h-86' : 'h-70'
                       }`}>
                       <Image
                         src={member.photo}
@@ -172,10 +184,18 @@ const TeamSection = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6 relative">
-                      <div className="mb-2 pb-4 border-b border-gray-200">
+                    <div className="p-4 relative">
+                      <div className="mb-2 pb-2 border-b border-gray-200">
                         {/* Position */}
-                        <p className="text-sm text-[#8B3A3A] mb-1 mt-3">{member.position}</p>
+                        {Array.isArray(member.position) ? (
+                          <div className="text-sm text-[#8B3A3A] mt-0">
+                            {member.position.map((line, idx) => (
+                              <p key={idx}>{line}</p>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-sm text-[#8B3A3A] mb-1 mt-3">{member.position}</p>
+                        )}
                         {/* Years of Experience */}
                         <p className="text-sm font-semibold text-gray-600">
                           {t('labels.experience')} {new Date().getFullYear() - member.experienceSince} {t('labels.years')}
@@ -199,34 +219,94 @@ const TeamSection = () => {
                       {/* Timeline */}
                       {member.timeline && Array.isArray(member.timeline) && member.timeline.length > 0 && (
                         <div className="mb-2">
-                          <h5 className="text-sm font-semibold text-gray-700 mb-2">
+                          <h5 className="text-ml font-semibold text-gray-700 mb-2">
                             {t('labels.timeline')}
                           </h5>
-                          <ul className="text-xs text-gray-600 space-y-1">
-                            {member.timeline.map((item, idx) => (
-                              <li key={idx} className="flex items-start">
-                                <span className="text-[#8B3A3A] mr-2">•</span>
-                                <span>{item}</span>
-                              </li>
-                            ))}
+                          <ul className="text-ml text-gray-600 space-y-0">
+                            {member.timeline.map((item, idx) => {
+                              const isEmpty = !item || !item.trim();
+
+                              if (isEmpty) {
+                                return <li key={idx} className="h-4 list-none"></li>;
+                              }
+
+                              return (
+                                <li key={idx} className="flex items-start">
+                                  <span className="text-[#8B3A3A] mr-2">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       )}
 
-                      {/* Fields of Work */}
+
+                      {/* Fields of Work - Expandable */}
                       {member.fields && member.fields.length > 0 && (
                         <div className="mb-4">
-                          <h5 className="text-sm font-semibold text-gray-700 mb-2">
-                            {t('labels.fields')}
-                          </h5>
-                          <ul className="text-xs text-gray-600 space-y-1">
-                            {member.fields.map((field, idx) => (
-                              <li key={idx} className="flex items-start">
-                                <span className="text-[#8B3A3A] mr-2">•</span>
-                                <span>{field}</span>
-                              </li>
-                            ))}
+                          {member.fields.length > 5 ? (
+                            <button
+                              onClick={() => toggleExpanded(member.id)}
+                              className="flex items-center justify-between w-full mb-2 hover:opacity-70 transition-opacity"
+                            >
+                              <h5 className="text-ml font-semibold text-gray-700">
+                                {t('labels.fields')}
+                              </h5>
+                              <svg
+                                className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${expandedMembers[member.id] ? 'rotate-180' : ''
+                                  }`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </button>
+                          ) : (
+                            <h5 className="text-ml font-semibold text-gray-700 mb-2">
+                              {t('labels.fields')}
+                            </h5>
+                          )}
+
+                          <ul className="text-ml text-gray-600 space-y-0">
+                            {member.fields
+                              .slice(0, expandedMembers[member.id] ? member.fields.length : 5)
+                              .map((field, idx) => (
+                                <li key={idx} className="flex items-start">
+                                  <span className="text-[#8B3A3A] mr-2">•</span>
+                                  <span>{field}</span>
+                                </li>
+                              ))}
                           </ul>
+
+                          {/* Show count of hidden items with arrow */}
+                          {member.fields.length > 5 && !expandedMembers[member.id] && (
+                            <button
+                              onClick={() => toggleExpanded(member.id)}
+                              className="mt-2 text-sm text-gray-500 italic flex items-center gap-1 hover:text-gray-700 transition-colors"
+                            >
+                              <span>+{member.fields.length - 5}</span>
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </button>
+                          )}
                         </div>
                       )}
                     </div>
@@ -253,8 +333,8 @@ const TeamSection = () => {
               key={index}
               onClick={() => scrollToIndex(index)}
               className={`transition-all duration-300 rounded-full ${index === currentIndex
-                  ? 'w-8 h-2 bg-[#8B3A3A]'
-                  : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
+                ? 'w-8 h-2 bg-[#8B3A3A]'
+                : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
                 }`}
               aria-label={`Go to team member ${index + 1}`}
             />

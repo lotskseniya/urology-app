@@ -546,7 +546,10 @@
                 "name": "EVGENIYA DMITRIVNA",
                 "surname": "DOVZHNOK",
                 "photo": "/images/team/member1.jpg",
-                "position": "Urologist, ultrasound doctor, healthcare administration specialist",
+                "position": [
+                    "Urologist, Ultrasound doctor,",
+                    "healthcare administration specialist"
+                ],
                 "timeline": [
                     "Since 2022 - to present - Urologist, Kyiv City Clinical Hospital No. 3;",
                     "From 2024 to the present - Urologist, ultrasound doctor, Agapit Medical Center",
@@ -574,7 +577,10 @@
                 "name": "YURIY PETROVICH",
                 "surname": "MYKHALCHYSHYN",
                 "photo": "/images/team/member2.png",
-                "position": "Head of the Department. Urologist of the Highest Qualification Category since 2004.",
+                "position": [
+                    "Head of the Department",
+                    "Urologist of the Highest Qualification Category since 2004"
+                ],
                 "timeline": [
                     "Since 2017 - Head of the Urology Department of Kyiv City Clinical Hospital No.3;",
                     "Since 2006 - Specialist in Ultrasound Diagnostics;",
@@ -686,7 +692,10 @@
                 "photo": "/images/team/member1.jpg",
                 "position": "Urologist",
                 "timeline": [
-                    "Urologist of Kyiv City Clinical Hospital No. 3;"
+                    "Active member of EAU (European Association of Urology)",
+                    " ",
+                    "Urologist of Kyiv City Clinical Hospital No. 3;",
+                    "Urologist of Oxford Medikal Clinic"
                 ],
                 "department": "Urology Department",
                 "fields": [
@@ -919,11 +928,14 @@
                 "name": "DMYTRO MYKHAYLOVYCH",
                 "surname": "MYKHAYLOV",
                 "photo": "/images/team/member1.jpg",
-                "position": "Urologist of the Highest Qualification Category. Candidate of Medical Sciences.",
+                "position": [
+                    "Urologist of the Highest Qualification Category",
+                    "Candidate of Medical Sciences"
+                ],
                 "timeline": [
-                    "Full member of EAU (European Association of Urology)",
+                    "Active member of EAU (European Association of Urology)",
                     "Member of ICS (International Society of Urinary Incontinence), full member of ES (Endourological Society), as well as national societies (Ukrainian Urological Association, Ukrainian Onco-Urological Society);",
-                    "",
+                    " ",
                     "Additionally, he has specializations in oncology and pediatric urology.",
                     "He completed internships in urodynamics (Canada), clinical urology (USA), and urolithiasis (Greece)."
                 ],
@@ -954,7 +966,7 @@
                 "photo": "/images/team/member1.jpg",
                 "position": "Urologist",
                 "timeline": [
-                    ""
+                    "Urologist at Kyiv City Clinical Hospital No.3;"
                 ],
                 "department": "Urology Department",
                 "fields": [
@@ -1030,9 +1042,9 @@
                 "photo": "/images/team/member1.jpg",
                 "position": "Urologist",
                 "timeline": [
-                    "Full member of the EAU (European Association of Urology)",
+                    "Active member of EAU (European Association of Urology)",
                     "Member of the Union of Oncologists of Ukraine",
-                    ""
+                    " "
                 ],
                 "department": "Urology Department",
                 "fields": [
