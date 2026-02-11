@@ -108,7 +108,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-22 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="py-10 md:py-22 bg-[#F5F3EF] overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -153,9 +153,9 @@ const TeamSection = () => {
                   style={{
                     width: '480px',
                     height: `${isCenter
-                    ? 'auto'
-                    : '60rem'
-                    }`
+                      ? 'auto'
+                      : '60rem'
+                      }`
                   }}
                   onClick={() => scrollToIndex(index)}
                 >

@@ -119,6 +119,24 @@
                 "description": "Comprehensive approach to treating oncourological diseases using the most advanced protocols.",
                 "procedures": [],
                 "image": ""
+            },
+            {
+                "id": "hyperplasia-treatment",
+                "title": "BENIGN PROSTATIC HYPERPLASIA TREATMENT",
+                "slug": "hyperplasia-treatment",
+                "preview": "Individual approach to determining the optimal treatment method",
+                "description": "Treatment performed using the most advanced equipment with selection of the most optimal treatment strategy taking into account the anatomical characteristics of each specific patient",
+                "procedures": [
+                    {
+                        "name": "Transurethral Resection of the Prostate (TURP):",
+                        "description": "Removal of prostate tissue through the urethra"
+                    },
+                    {
+                        "name": "Bipolar Plasmakinetic Prostate Resection",
+                        "description": "Use of the most advanced equipment manufactured in Germany, Japan and the USA"
+                    }
+                ],
+                "image": ""
             }
         ],
         "performedInDepartment": "Performed in our department:"
@@ -370,32 +388,51 @@
             ]
         },
         "mens-and-womens-health": {
-            "title": "Female Urology",
-            "subtitle": "Specialized care for women with urological conditions.",
-            "treatment": {
-                "title": "Main Directions:",
+            "title": "MEN'S AND WOMEN'S HEALTH",
+            "subtitle": [
+                "Urological problems could affect both men and women. Our doctors provide a delicate and professional approach to each patient — regardless of the nature of the deceases."
+            ],
+            "diagnostics": {
+                "title": "",
                 "methods": [
-                    {
-                        "name": "Treatment of urinary incontinence",
-                        "description": "conservative and surgical"
-                    },
-                    {
-                        "name": "Pelvic organ prolapse",
-                        "description": "reconstructive operations"
-                    },
-                    {
-                        "name": "Recurrent infections",
-                        "description": "diagnosis and prevention"
-                    },
-                    {
-                        "name": "Chronic pain syndrome",
-                        "description": "comprehensive therapy"
-                    }
+                    "If you experience urination disorders, unexplained pelvic pain, urinary urgency or its absence, urinary retention after strokes, spinal injuries or gynecological surgeries, unsatisfactory results from treatment at various clinics, problems with urine flow after prostate surgery — these and many other issues can be resolved after a comprehensive urodynamic study.",
+                    "Using expert-level PICO SMART equipment (Medica, Italy), Ukraine's leading specialists Mykhailov D.M. and Melymuka O.V. will perform filling cystometry or pressure-flow studies.",
+                    "The procedure is helpful not only for adults, but also for children.",
+                    "Examinations are performed promptly, on an outpatient basis and do not require general anesthesia."
+                ],
+                "description": [
+                    "*Treatment of urinary incontinence of all types and any complexity:*",
+                    "Our department's doctors are able to identify all the details regarding the causes of the condition using the most advanced urodynamic equipment.",
+                    "For women and men with stress urinary incontinence of any age, we offer original sling systems from the world's leading manufacturers. Maximum effectiveness with no issues of erosion or infection.",
+                    "*Treatment of chronic pain syndrome and overactive bladder:*",
+                    "Unique treatment methods for chronic bladder pain and overactive bladder have been used for many years. Thanks to the widespread use of botulinum therapy in treating various urogynecological problems (injections into the bladder wall, submucosa, perineal muscles and other trigger points) using exclusively the original Botox product (Allergan, Ireland), impressive results have been achieved with complete safety.",
+                    "Currently, the intravesical botox injection technique is successfully applied to men simultaneously with transurethral operations for prostate hyperplasia.",
+                    "*Treatment of urinary tract infections:*",
+                    "Urinary tract infections are one of the most common conditions, which may present with frequent painful urination, a feeling of incomplete bladder emptying, and discomfort in the lower abdomen.",
+                    "With timely treatment, therapy is generally short and effective.",
+                    "Recurrent forms require special attention — when flare-ups occur three or more times per year. In such cases, we conduct in-depth diagnostics to identify the cause of recurrences and develop an individual preventive treatment plan."
                 ]
             },
+            "treatment": {
+                "title": "In addition, we also treat the following urological conditions:",
+                "subtitle": "",
+                "description": [],
+                "methods": [
+                    "**For men:**</br> - Prostatitis treatment and benign prostatic hyperplasia (BPH) (/services/hyperplasia-treatment).</br> - Diseases of the urethra and bladder.</br> - Other sensitive problems.",
+                    "**For women:**</br> - Cystitis and recurrent urinary tract infections.</br> - Pelvic organ prolapse.</br> - Other sensitive problems."
+                ],
+                "advantages": [
+                    "Want to learn more or schedule a procedure? — Fill out the form below and we will contact you for a consultation.",
+                    "We maintain complete confidentiality.",
+                    "Trust your health to an experienced urologist."
+                ]
+            },
+            "prevention": {
+                "title": "",
+                "methods": []
+            },
             "images": [
-                "/images/services/female-urology-1.jpg",
-                "/images/services/female-urology-2.jpg"
+                "/images/services/mens-and-womens-urology-1.png"
             ]
         },
         "cancer-treatment": {
@@ -435,6 +472,40 @@
             "images": [
                 "/images/services/oncology-1.jpg",
                 "/images/services/oncology-2.jpg"
+            ]
+        },
+        "hyperplasia-treatment": {
+            "title": " BENIGN PROSTATIC HYPERPLASIA TREATMENT",
+            "subtitle": "Treatment of benign prostatic hyperplasia (formerly known as prostate adenoma) includes several methods when conservative therapy is ineffective. Classical open surgery methods are rarely used at the current stage of medical technology development.",
+            "diagnostics": {
+                "title": "Transurethral resection of the prostate (TURP):",
+                "methods": [
+                    "- The current gold standard of surgical treatment is *transurethral resection of the prostate (TURP)*, meaning removal of prostate tissue through the urethra using stationary instruments.",
+                    "This operation is the most widely performed in the world. First performed at the Mayo Clinic (USA) in 1939. Over nearly a century of use, significant technological advances have reduced postoperative complications and risks to fractions of a percent."
+                ],
+                "description": []
+            },
+            "treatment": {
+                "title": "Bipolar plasmakinetic prostate resection:",
+                "subtitle": "",
+                "description": [
+                    "- Our urology department has implemented and widely uses the method of *bipolar plasmakinetic prostate resection* using the most advanced equipment manufactured in Germany, Japan and the USA.",
+                    "A distinctive feature of surgical care in our department is the ability to individually select the instrumental setup for each specific patient.",
+                    "This applies to the anatomical characteristics of the urethra, previously performed procedures and surgical interventions on the urinary tract, and the volume of hypertrophied tissue.",
+                    "The plasmakinetic resection method combined with vaporization in the surgical area ensures a shorter postoperative period of 2–3 days and rapid postoperative rehabilitation.",
+                    "This distinguishes the technologies of our urology department from other urological institutions."
+                ],
+                "methods": [],
+                "advantages": []
+            },
+            "prevention": {
+                "title": " ",
+                "intro": " ",
+                "methods": [],
+                "description": " "
+            },
+            "images": [
+                "/images/services/hyperplasia-1.png"
             ]
         }
     },
@@ -1299,6 +1370,45 @@
                     14,
                     25,
                     45
+                ]
+            }
+        }
+    },
+    "treatmentSteps": {
+        "title": "How do procedures work?",
+        "steps": {
+            "consultation": {
+                "title": "Consultation",
+                "desc1": "Initial appointment with a urologist.",
+                "desc2": "Medical history review, examination, determination of the need for intervention.",
+                "images": [
+                    "/images/steps/steps-1.jpg"
+                ]
+            },
+            "examination": {
+                "title": "Examination",
+                "desc1": "Necessary tests and studies.",
+                "desc2": "Ultrasound, laboratory tests, instrumental diagnostics (if needed).",
+                "images": [
+                    "/images/steps/steps-2.jpg",
+                    "/images/steps/steps-3.jpg"
+                ]
+            },
+            "treatment": {
+                "title": "Treatment",
+                "desc1": "The surgical or therapeutic intervention itself.",
+                "desc2": "Performed under appropriate anesthesia in a modern operating room.",
+                "images": [
+                    "/images/steps/steps-4.jpg",
+                    "/images/steps/steps-5.jpg"
+                ]
+            },
+            "observation": {
+                "title": "Observation",
+                "desc1": "Post-procedure monitoring and discharge.",
+                "desc2": "Recovery after surgery and hospital stay.",
+                "images": [
+                    "/images/steps/steps-6.jpg"
                 ]
             }
         }

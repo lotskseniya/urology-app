@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import ServicesSection from '@/components/servicesSection';
 import TeamSection from '@/components/TeamSection';
+import TreatmentSteps from '@/components/TreatmentSteps'
 import Image from 'next/image';
 
 interface Service {
@@ -144,8 +145,10 @@ export default function HomeClient({ services, locale, servicesTitle, servicesSu
                 />
             </div>
 
-            {/* Team Section */}
+
             <TeamSection />
+
+            <TreatmentSteps />
         </>
     );
 }

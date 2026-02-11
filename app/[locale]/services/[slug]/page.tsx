@@ -12,7 +12,8 @@ const validSlugs = [
   'robotic-surgery',
   'cancer-treatment',
   'mens-and-womens-health',
-  'reproductive-surgery'
+  'reproductive-surgery',
+  'hyperplasia-treatment'
 ] as const
 
 const serviceTabs = [
@@ -23,6 +24,7 @@ const serviceTabs = [
   { slug: 'cancer-treatment', title: 'ЛІКУВАННЯ РАКУ' },
   { slug: 'robotic-surgery', title: 'РОБОТИЗОВАНА ХІРУРГІЯ' },
   { slug: 'mens-and-womens-health', title: 'ЧОЛОВІЧЕ ТА ЖІНОЧЕ ЗДОРОВ\'Я' },
+  { slug: 'hyperplasia-treatment', title: 'ЛІКУВАННЯ АДЕНОМИ ПРОСТАТИ' }
 ]
 
 interface TreatmentMethod {
@@ -30,11 +32,15 @@ interface TreatmentMethod {
   description: string
 }
 
-function parseFormattedText(text: string) {
+function parseFormattedText(text: string, locale?: string) {
+  const withLinks = text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    `<a href="/${locale}$2" ...>$1</a>`
+  )
   const withBold = text.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#911F16]">$1</strong>')
   const withAsteriskBold = withBold.replace(/\*(.*?)\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
   const withBreaks = withAsteriskBold.replace(/<\/br>/g, '<br />')
-  const withNewlines = withBreaks.replace(/\n/g, '<br />') // Add newline support
+  const withNewlines = withBreaks.replace(/\n/g, '<br />')
   return withNewlines
 }
 
@@ -69,6 +75,7 @@ export default async function ServicePage({
   const getArrayData = (key: string): string[] => {
     try {
       const data = t.raw(key)
+      if (data === undefined || data === null) return []
       return Array.isArray(data) ? data : []
     } catch {
       return []
@@ -91,12 +98,13 @@ export default async function ServicePage({
   const treatmentMethods = getTreatmentMethods()
   const treatmentAdvantages = getArrayData('treatment.advantages')
   const treatmentDescriptions = getArrayData('treatment.description')
-  const subtitleArray = getArrayData('subtitle') // Get subtitle as array
+  const subtitleArray = getArrayData('subtitle')
 
-  // Safe translation getters
   const subtitle = (() => {
+    if (subtitleArray.length > 0) return ''
     try {
-      return t('subtitle')
+      const raw = t.raw('subtitle')
+      return typeof raw === 'string' ? raw : ''
     } catch {
       return ''
     }
@@ -104,7 +112,8 @@ export default async function ServicePage({
 
   const diagnosticsTitle = (() => {
     try {
-      return t('diagnostics.title')
+      const raw = t.raw('diagnostics.title')
+      return typeof raw === 'string' ? raw : ''
     } catch {
       return ''
     }
@@ -112,7 +121,8 @@ export default async function ServicePage({
 
   const diagnosticsIntro = (() => {
     try {
-      return t('diagnostics.intro')
+      const raw = t.raw('diagnostics.intro')
+      return typeof raw === 'string' ? raw : ''
     } catch {
       return ''
     }
@@ -120,7 +130,8 @@ export default async function ServicePage({
 
   const treatmentTitle = (() => {
     try {
-      return t('treatment.title')
+      const raw = t.raw('treatment.title')
+      return typeof raw === 'string' ? raw : ''
     } catch {
       return ''
     }
@@ -128,19 +139,20 @@ export default async function ServicePage({
 
   const treatmentSubtitle = (() => {
     try {
-      return t('treatment.subtitle')
+      const raw = t.raw('treatment.subtitle')
+      return typeof raw === 'string' ? raw : ''
     } catch {
       return ''
     }
   })()
 
-  const treatmentAdditional = (() => {
-    try {
-      return t('treatment.additional')
-    } catch {
-      return ''
-    }
-  })()
+  // const treatmentAdditional = (() => {
+  //   try {
+  //     return t('treatment.additional')
+  //   } catch {
+  //     return ''
+  //   }
+  // })()
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: '#F5F3EF' }}>
@@ -201,11 +213,13 @@ export default async function ServicePage({
               )}
 
               {/* Diagnostics Section */}
-              {diagnosticMethods.length > 0 && hasValidTranslation(diagnosticsTitle) && (
+              {diagnosticMethods.length > 0 && (
                 <section className="mb-12">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                    {diagnosticsTitle}
-                  </h2>
+                  {hasValidTranslation(diagnosticsTitle) && (
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                      {diagnosticsTitle}
+                    </h2>
+                  )}
 
                   {hasValidTranslation(diagnosticsIntro) && (
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -213,10 +227,12 @@ export default async function ServicePage({
                     </p>
                   )}
 
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6 list-none">
                     {diagnosticMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        <span className="text-[#911F16] text-xl mt-1">-</span>
+                        {(slug !== 'mens-and-womens-health' || 'hyperplasia-treatment') && (
+                          <span className="text-[#911F16] text-xl mt-1">-</span>
+                        )}
                         <div
                           className="text-gray-700 text-lg flex-1"
                           dangerouslySetInnerHTML={{ __html: parseFormattedText(method) }}
@@ -290,11 +306,11 @@ export default async function ServicePage({
                   </div>
 
                   {/* Only show additional if it has valid content */}
-                  {hasValidTranslation(treatmentAdditional) && (
+                  {/* {hasValidTranslation(treatmentAdditional) && (
                     <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                       {treatmentAdditional}
                     </p>
-                  )}
+                  )} */}
 
                   {treatmentAdvantages.length > 0 && (
                     <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-600 mb-6">
