@@ -1,18 +1,39 @@
 'use client'
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import BookVisitBtn from './BookVisitBtn'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const t = useTranslations('navbar');
+    const pathname = usePathname();
+
+    const isHomePage = pathname === '/uk' || pathname === '/en' || pathname === '/';
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const threshold = isHomePage ? 120 : -1;
+            const isScrolled = window.scrollY > threshold;
+            setScrolled(isScrolled);
+        };
+
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isHomePage]);
 
     return (
-        <header className='sticky top-0 z-50'>
+        <header className={`
+            sticky top-0 z-50 transition-all duration-300
+            ${scrolled ? 'bg-[#F5F3EF] shadow-md' : 'bg-transparent'}
+        `}>
             <nav className='w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-3 sm:py-4'>
                 <div className='flex items-center justify-between gap-8 xl:gap-12 2xl:gap-16'>
 
@@ -47,14 +68,15 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop Navigation (xl and above) */}
-                    <div className='hidden xl:flex items-center gap-16 2xl:gap-24 flex-1'>
+                    <div className='hidden xl:flex items-center justify-between flex-1'>
                         <LanguageSwitcher />
 
-                        <ul className='flex items-center gap-6 2xl:gap-12 list-none'>
+
+                        <ul className='flex items-center gap-6 2xl:gap-12 list-none absolute right-90'>
                             <li>
                                 <Link
                                     href="/services"
-                                    className='text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap'
+                                    className='text-[19px] font-medium text-gray-900 hover:text-burgundy transition-colors whitespace-nowrap'
                                 >
                                     {t('services')}
                                 </Link>
@@ -62,7 +84,7 @@ const Navbar = () => {
                             <li>
                                 <Link
                                     href="/team"
-                                    className='text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap'
+                                    className='text-[19px] font-medium text-gray-900 hover:text-burgundy transition-colors whitespace-nowrap'
                                 >
                                     {t('team')}
                                 </Link>
@@ -70,7 +92,7 @@ const Navbar = () => {
                             <li>
                                 <Link
                                     href="/contacts"
-                                    className='text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors whitespace-nowrap'
+                                    className='text-[19px] font-medium text-gray-900 hover:text-burgundy transition-colors whitespace-nowrap'
                                 >
                                     {t('contacts')}
                                 </Link>
@@ -79,14 +101,14 @@ const Navbar = () => {
                     </div>
 
                     {/* Tablet Navigation (lg to xl) */}
-                    <div className='hidden lg:flex xl:hidden items-center gap-8 flex-1'>
+                    <div className='hidden lg:flex xl:hidden items-center justify-between gap-8 flex-1'>
                         <LanguageSwitcher />
 
-                        <ul className='flex items-center gap-4'>
+                        <ul className='flex items-center gap-4 list-none'>
                             <li>
                                 <Link
                                     href="/services"
-                                    className='text-xs font-medium text-gray-700 hover:text-gray-900 transition-colors'
+                                    className='text-base font-medium text-gray-900 hover:text-burgundy transition-colors'
                                 >
                                     {t('services')}
                                 </Link>
@@ -94,7 +116,7 @@ const Navbar = () => {
                             <li>
                                 <Link
                                     href="/team"
-                                    className='text-xs font-medium text-gray-700 hover:text-gray-900 transition-colors'
+                                    className='text-base font-medium text-gray-900 hover:text-burgundy transition-colors'
                                 >
                                     {t('team')}
                                 </Link>
@@ -102,7 +124,7 @@ const Navbar = () => {
                             <li>
                                 <Link
                                     href="/contacts"
-                                    className='text-xs font-medium text-gray-700 hover:text-gray-900 transition-colors'
+                                    className='text-base font-medium text-gray-900 hover:text-burgundy transition-colors'
                                 >
                                     {t('contacts')}
                                 </Link>
@@ -151,7 +173,7 @@ const Navbar = () => {
                     <div className='lg:hidden mt-4 pb-4 border-t pt-4 space-y-4 animate-slideDown'>
                         <LanguageSwitcher />
 
-                        <ul className='flex flex-col gap-3'>
+                        <ul className='flex flex-col gap-3 list-none'>
                             <li>
                                 <Link
                                     href="/services"

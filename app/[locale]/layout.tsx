@@ -1,8 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
-import SkyBackground from '@/components/SkyBackground';
-import CloudsAnimation from '@/components/CloudsAnimation';
+import ConditionalBackground from '@/components/ConditionalBackground';
 import '../globals.css';
 
 export default async function LocaleLayout({
@@ -17,11 +16,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <div className="fixed inset-0 w-full h-full -z-10">
-        <SkyBackground />
-        <CloudsAnimation />
-      </div>
-
+      <ConditionalBackground />
       <Navbar />
       <main>
         {children}

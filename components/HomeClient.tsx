@@ -98,9 +98,9 @@ export default function HomeClient({ services, locale, servicesTitle, servicesSu
                     </div>
 
                     {/* Bottom section */}
-                    <div className="absolute bottom-16 2xl:bottom-16 sm:bottom-16 left-0 right-0 flex justify-end items-end px-4">
+                    <div className="absolute bottom-16 2xl:bottom-16 md:bottom-8 sm:bottom-20 left-0 right-0 flex justify-end items-end px-4">
                         {/* Right side text */}
-                        <div className="mr-[4vw]  2xl:w-[28dvw] md:w-[29dvw] sm:w-[32dvw] text-right">
+                        <div className="mr-[4vw] md:mr-[2vw] 2xl:w-[28dvw] md:w-[22dvw] sm:w-[32dvw] text-right">
                             <h2 className="font-montserrat text-dark-main font-bold text-[3vw] leading-tight mb-6">
                                 {t('forEvery')}<br />
                                 {t('every')}<br />

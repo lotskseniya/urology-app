@@ -81,7 +81,32 @@
                 "slug": "reproductive-surgery",
                 "preview": "Delicate reproductive organ surgeries using modern techniques.",
                 "description": "Professional approach to surgical treatment of reproductive organ diseases.",
-                "procedures": [],
+                "procedures": [
+                    {
+                        "name": "Circumcision:",
+                        "description": "Main indications: Phimosis (narrowing of the foreskin); Paraphimosis; Chronic inflammation (balanoposthitis); etc."
+                    },
+                    {
+                        "name": "Removal of condylomas and papillomas:",
+                        "description": "Removal using modern technologies — laser or radiowave method;"
+                    },
+                    {
+                        "name": "Penile plastic surgery:",
+                        "description": "Plastic surgery for curvature, trauma consequences or aesthetic indications;"
+                    },
+                    {
+                        "name": "Treatment of testicular hydrocele",
+                        "description": ""
+                    },
+                    {
+                        "name": "Testicular prosthetics",
+                        "description": ""
+                    },
+                    {
+                        "name": "Removal of spermatic cord or scrotal cyst",
+                        "description": ""
+                    }
+                ],
                 "image": ""
             },
             {
@@ -108,7 +133,32 @@
                 "slug": "mens-and-womens-health",
                 "preview": "Comprehensive approach to treatment and prevention of urological diseases.",
                 "description": "Individual diagnostic and treatment programs for men and women.",
-                "procedures": [],
+                "procedures": [
+                    {
+                        "name": "Treatment of urinary incontinence of all types and any complexity",
+                        "description": ""
+                    },
+                    {
+                        "name": "Treatment of chronic pain syndrome and overactive bladder:",
+                        "description": "Unique treatment methods for chronic bladder pain and overactive bladder"
+                    },
+                    {
+                        "name": "Treatment of urinary tract infections",
+                        "description": ""
+                    },
+                    {
+                        "name": "Treatment of prostatitis and benign prostatic hyperplasia",
+                        "description": ""
+                    },
+                    {
+                        "name": "Treatment of urethral and bladder diseases",
+                        "description": ""
+                    },
+                    {
+                        "name": "Treatment of cystitis and recurrent urinary tract infections",
+                        "description": ""
+                    }
+                ],
                 "image": ""
             },
             {
