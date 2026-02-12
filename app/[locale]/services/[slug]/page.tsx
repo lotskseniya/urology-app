@@ -35,9 +35,9 @@ interface TreatmentMethod {
 function parseFormattedText(text: string, locale?: string) {
   const withLinks = text.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
-    `<a href="/${locale}$2" ...>$1</a>`
+    `<a href="/${locale}$2" class="text-[#911F16] underline hover:text-[#6B2A2A] transition-colors">$1</a>`
   )
-  const withBold = text.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#911F16]">$1</strong>')
+  const withBold = withLinks.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-[#911F16]">$1</strong>')
   const withAsteriskBold = withBold.replace(/\*(.*?)\*/g, '<strong class="font-semibold text-gray-900">$1</strong>')
   const withBreaks = withAsteriskBold.replace(/<\/br>/g, '<br />')
   const withNewlines = withBreaks.replace(/\n/g, '<br />')
@@ -297,7 +297,7 @@ export default async function ServicePage({
                             </h4>
                             <div
                               className="text-gray-700 text-lg"
-                              dangerouslySetInnerHTML={{ __html: parseFormattedText(method.description) }}
+                              dangerouslySetInnerHTML={{ __html: parseFormattedText(method, locale) }}
                             />
                           </div>
                         )
