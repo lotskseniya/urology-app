@@ -1,19 +1,10 @@
 'use client'
-
 import { useTranslations } from 'next-intl';
 import ServicesSection from '@/components/servicesSection';
 import TeamSection from '@/components/TeamSection';
 import TreatmentSteps from '@/components/TreatmentSteps'
 import Image from 'next/image';
-
-interface Service {
-    id: string
-    title: string
-    description: string
-    icon: string
-    slug: string
-    [key: string]: unknown // For any additional properties
-}
+import { Service } from '@/lib/types'
 
 interface HomeClientProps {
     services: Service[];
@@ -136,7 +127,7 @@ export default function HomeClient({ services, locale, servicesTitle, servicesSu
             </section>
 
             {/* Services Section */}
-            <div>
+            <div id="services">
                 <ServicesSection
                     services={services}
                     locale={locale}

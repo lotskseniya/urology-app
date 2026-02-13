@@ -108,7 +108,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section className="py-10 md:py-22 bg-[#F5F3EF] overflow-hidden">
+    <section className="py-10 md:py-22 bg-[#F5F3EF] overflow-hidden" id="team">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">

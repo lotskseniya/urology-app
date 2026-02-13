@@ -13,7 +13,10 @@ const validSlugs = [
   'cancer-treatment',
   'mens-and-womens-health',
   'reproductive-surgery',
-  'hyperplasia-treatment'
+  'hyperplasia-treatment',
+  'kidney-cancer-treatment',
+  'bladder-cancer-treatment',
+  'prostate-cancer-treatment',
 ] as const
 
 const serviceTabs = [
@@ -281,7 +284,7 @@ export default async function ServicePage({
                   <div className="space-y-6 mb-8">
                     {treatmentMethods.map((method: string | TreatmentMethod, index: number) => {
                       if (typeof method === 'string') {
-                        const formattedText = parseFormattedText(method)
+                        const formattedText = parseFormattedText(method, locale)
                         return (
                           <div
                             key={index}
@@ -290,6 +293,7 @@ export default async function ServicePage({
                           />
                         )
                       } else {
+                        // method is TreatmentMethod object - parse name and description separately
                         return (
                           <div key={index} className="bg-gray-50 p-6 rounded-xl border-l-4 border-[#8B1E1E]">
                             <h4 className="text-lg font-bold text-[#911F16] mb-2">
@@ -297,20 +301,13 @@ export default async function ServicePage({
                             </h4>
                             <div
                               className="text-gray-700 text-lg"
-                              dangerouslySetInnerHTML={{ __html: parseFormattedText(method, locale) }}
+                              dangerouslySetInnerHTML={{ __html: parseFormattedText(method.description, locale) }}
                             />
                           </div>
                         )
                       }
                     })}
                   </div>
-
-                  {/* Only show additional if it has valid content */}
-                  {/* {hasValidTranslation(treatmentAdditional) && (
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                      {treatmentAdditional}
-                    </p>
-                  )} */}
 
                   {treatmentAdvantages.length > 0 && (
                     <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-600 mb-6">

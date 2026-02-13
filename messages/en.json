@@ -167,7 +167,20 @@
                 "slug": "cancer-treatment",
                 "preview": "Modern methods of diagnosis and treatment of oncological diseases.",
                 "description": "Comprehensive approach to treating oncourological diseases using the most advanced protocols.",
-                "procedures": [],
+                "procedures": [
+                    {
+                        "name": "[Kidney and ureter cancer treatment](/services/kidney-cancer-treatment)",
+                        "description": "Diagnosis and treatment of kidney and upper urinary tract tumors"
+                    },
+                    {
+                        "name": "[Bladder cancer treatment](/services/bladder-cancer-treatment)",
+                        "description": "Endoscopic and radical methods of bladder cancer treatment"
+                    },
+                    {
+                        "name": "[Prostate cancer treatment](/services/prostate-cancer-treatment)",
+                        "description": "Modern approaches to diagnosis and treatment of prostate cancer"
+                    }
+                ],
                 "image": ""
             },
             {
@@ -186,6 +199,33 @@
                         "description": "Use of the most advanced equipment manufactured in Germany, Japan and the USA"
                     }
                 ],
+                "image": ""
+            },
+            {
+                "id": "kidney-cancer-treatment",
+                "title": "KIDNEY AND URETER CANCER TREATMENT",
+                "slug": "kidney-cancer-treatment",
+                "preview": "Modern methods of diagnosis and treatment of kidney and ureter cancer.",
+                "description": "Comprehensive approach to treating oncourological diseases of kidney and ureter.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "bladder-cancer-treatment",
+                "title": "BLADDER CANCER TREATMENT",
+                "slug": "bladder-cancer-treatment",
+                "preview": "Modern methods of diagnosis and treatment of bladder cancer.",
+                "description": "Comprehensive approach to bladder cancer treatment.",
+                "procedures": [],
+                "image": ""
+            },
+            {
+                "id": "prostate-cancer-treatment",
+                "title": "PROSTATE CANCER TREATMENT",
+                "slug": "prostate-cancer-treatment",
+                "preview": "Modern methods of diagnosis and treatment of prostate cancer.",
+                "description": "Comprehensive approach to prostate cancer treatment.",
+                "procedures": [],
                 "image": ""
             }
         ],
@@ -489,13 +529,19 @@
         },
         "cancer-treatment": {
             "title": "Oncourology",
-            "subtitle": "Comprehensive diagnosis and treatment of malignant tumors of the genitourinary system.",
+            "subtitle": [
+                "Comprehensive diagnosis and treatment of malignant tumors of the genitourinary system."
+            ],
             "diagnostics": {
                 "title": "Diagnostics:",
-                "methods": []
+                "intro": "",
+                "methods": [],
+                "description": []
             },
             "treatment": {
                 "title": "Treatment:",
+                "subtitle": "",
+                "description": [],
                 "methods": [
                     {
                         "name": "Radical prostatectomy",
@@ -511,9 +557,14 @@
                     },
                     {
                         "name": "TUR of tumors",
-                        "description": "organ-preserving operations"
+                        "description": "organ-sparing operations"
                     }
-                ]
+                ],
+                "advantages": []
+            },
+            "prevention": {
+                "title": "",
+                "methods": []
             },
             "images": [
                 "/images/services/oncology-1.jpg",
@@ -521,10 +572,13 @@
             ]
         },
         "hyperplasia-treatment": {
-            "title": " BENIGN PROSTATIC HYPERPLASIA TREATMENT",
-            "subtitle": "Treatment of benign prostatic hyperplasia (formerly known as prostate adenoma) includes several methods when conservative therapy is ineffective. Classical open surgery methods are rarely used at the current stage of medical technology development.",
+            "title": "TREATMENT OF BENIGN PROSTATIC HYPERPLASIA:",
+            "subtitle": [
+                "Treatment of benign prostatic hyperplasia (formerly prostate adenoma) includes several methods when conservative therapy is ineffective. Classical open surgery methods are rarely used at the current stage of medical technology development."
+            ],
             "diagnostics": {
-                "title": "Transurethral resection of the prostate (TURP):",
+                "title": "Transurethral Resection of the Prostate (TURP)",
+                "intro": "",
                 "methods": [
                     "- The current gold standard of surgical treatment is *transurethral resection of the prostate (TURP)*, meaning removal of prostate tissue through the urethra using stationary instruments.",
                     "This operation is the most widely performed in the world. First performed at the Mayo Clinic (USA) in 1939. Over nearly a century of use, significant technological advances have reduced postoperative complications and risks to fractions of a percent."
@@ -532,13 +586,13 @@
                 "description": []
             },
             "treatment": {
-                "title": "Bipolar plasmakinetic prostate resection:",
+                "title": "Treatment with Bipolar Plasmakinetic Prostate Resection:",
                 "subtitle": "",
                 "description": [
                     "- Our urology department has implemented and widely uses the method of *bipolar plasmakinetic prostate resection* using the most advanced equipment manufactured in Germany, Japan and the USA.",
                     "A distinctive feature of surgical care in our department is the ability to individually select the instrumental setup for each specific patient.",
                     "This applies to the anatomical characteristics of the urethra, previously performed procedures and surgical interventions on the urinary tract, and the volume of hypertrophied tissue.",
-                    "The plasmakinetic resection method combined with vaporization in the surgical area ensures a shorter postoperative period of 2–3 days and rapid postoperative rehabilitation.",
+                    "The plasmakinetic resection method combined with vaporization in the surgical area ensures a shorter postoperative period of 2-3 days and rapid postoperative rehabilitation.",
                     "This distinguishes the technologies of our urology department from other urological institutions."
                 ],
                 "methods": [],
@@ -553,6 +607,161 @@
             "images": [
                 "/images/services/hyperplasia-1.png"
             ]
+        },
+        "kidney-cancer-treatment": {
+            "title": "KIDNEY AND URETER CANCER TREATMENT",
+            "subtitle": [
+                "Kidney and ureter cancer are serious oncourological diseases that require timely diagnosis and comprehensive treatment."
+            ],
+            "diagnostics": {
+                "title": "",
+                "intro": "",
+                "methods": [],
+                "description": [
+                    "Modern diagnostics allows determining the disease stage, tumor size and location, presence of metastases, which is critical for choosing the optimal treatment approach."
+                ]
+            },
+            "treatment": {
+                "title": "Treatment Methods:",
+                "subtitle": "",
+                "description": [
+                    "We offer an individual approach to each patient using the most advanced surgical and therapeutic methods."
+                ],
+                "methods": [
+                    {
+                        "name": "Radical nephrectomy",
+                        "description": "complete removal of kidney with tumor for localized cancer"
+                    },
+                    {
+                        "name": "Partial nephrectomy (kidney resection)",
+                        "description": "organ-sparing surgery for small tumors"
+                    },
+                    {
+                        "name": "Nephroureterectomy",
+                        "description": "removal of kidney with ureter for upper urinary tract cancer"
+                    },
+                    {
+                        "name": "Laparoscopic and robotic surgeries",
+                        "description": "minimally invasive methods with rapid recovery"
+                    }
+                ],
+                "advantages": [
+                    "Multidisciplinary treatment approach",
+                    "Use of the most advanced protocols",
+                    "Organ-sparing operations when possible",
+                    "Regular monitoring after treatment"
+                ]
+            },
+            "prevention": {
+                "title": "",
+                "methods": []
+            },
+            "images": []
+        },
+        "bladder-cancer-treatment": {
+            "title": "BLADDER CANCER TREATMENT",
+            "subtitle": [
+                "Bladder cancer is one of the most common oncourological diseases requiring timely detection and comprehensive treatment."
+            ],
+            "diagnostics": {
+                "title": "",
+                "intro": "",
+                "methods": [],
+                "description": [
+                    "Timely diagnosis allows detecting the disease in early stages and selecting the most effective treatment."
+                ]
+            },
+            "treatment": {
+                "title": "Treatment Methods:",
+                "subtitle": "",
+                "description": [
+                    "Choice of treatment method depends on disease stage, depth of tumor invasion and patient's general condition."
+                ],
+                "methods": [
+                    {
+                        "name": "Transurethral Resection (TUR) of bladder tumor",
+                        "description": "endoscopic removal of superficial tumors through the urethra"
+                    },
+                    {
+                        "name": "Radical cystectomy",
+                        "description": "complete bladder removal for invasive cancer"
+                    },
+                    {
+                        "name": "Bladder reconstruction",
+                        "description": "creation of new reservoir from intestinal segment after cystectomy"
+                    },
+                    {
+                        "name": "Intravesical immunotherapy and chemotherapy",
+                        "description": "direct drug administration into bladder for recurrence prevention"
+                    },
+                    {
+                        "name": "Laparoscopic and robotic surgeries",
+                        "description": "minimally invasive methods with high precision"
+                    }
+                ],
+                "advantages": [
+                    "Organ-sparing operations in early stages",
+                    "Modern reconstruction methods after cystectomy",
+                    "Comprehensive recurrence prevention",
+                    "Regular monitoring and control"
+                ]
+            },
+            "prevention": {
+                "title": "",
+                "methods": []
+            },
+            "images": []
+        },
+        "prostate-cancer-treatment": {
+            "title": "PROSTATE CANCER TREATMENT",
+            "subtitle": [
+                "Prostate cancer is the most common oncourological disease in men. Timely diagnosis and properly chosen treatment provide high chances of recovery."
+            ],
+            "diagnostics": {
+                "title": "",
+                "intro": "",
+                "methods": [],
+                "description": [
+                    "Comprehensive diagnostics allows determining disease stage, tumor aggressiveness and optimal treatment approach."
+                ]
+            },
+            "treatment": {
+                "title": "Treatment Methods:",
+                "subtitle": "",
+                "description": [
+                    "Choice of treatment method depends on disease stage, patient age, comorbidities and individual characteristics."
+                ],
+                "methods": [
+                    {
+                        "name": "Radical prostatectomy",
+                        "description": "complete prostate removal with tumor"
+                    },
+                    {
+                        "name": "Laparoscopic and robotic prostatectomy",
+                        "description": "minimally invasive operations with high precision and function preservation"
+                    },
+                    {
+                        "name": "Chemotherapy and immunotherapy",
+                        "description": "for advanced disease forms"
+                    }
+                ],
+                "advantages": [
+                    "Nerve-sparing surgical techniques",
+                    "Preservation of erectile function and urinary continence",
+                    "Individual approach to each patient",
+                    "Long-term monitoring after treatment"
+                ]
+            },
+            "prevention": {
+                "title": "Prevention and Early Detection:",
+                "methods": [
+                    "Annual PSA testing for men over 50",
+                    "For men with family history — from age 45",
+                    "Regular urological examinations",
+                    "Healthy lifestyle and proper nutrition"
+                ]
+            },
+            "images": []
         }
     },
     "common": {

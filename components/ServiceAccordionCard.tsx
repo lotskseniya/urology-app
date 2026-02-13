@@ -4,7 +4,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
+import { parseFormattedText } from '@/lib/utils'
 
 interface ServiceProcedure {
   name: string
@@ -105,21 +106,24 @@ const ServiceAccordionCard = ({
                       </p>
 
                       {procedures && procedures.length > 0 && (
-                        <div className="space-y-4">
-                          <h4 className="font-bold text-[#8B3A3A] text-lg mb-4">
-                            {performedInDepartment}
-                          </h4>
-                          {procedures.map((procedure, idx) => (
-                            <div key={idx} className="border-l-4 border-[#8B3A3A] pl-4">
-                              <h5 className="font-bold text-gray-900 mb-1">
-                                {procedure.name}
-                              </h5>
-                              <p className="text-sm text-gray-600">
-                                {procedure.description}
-                              </p>
-                            </div>
+                        <ul className="space-y-2 list-none">
+                          {procedures.map((procedure: any, idx: number) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-burgundy">•</span>
+                              <div>
+                                <span
+                                  className="font-semibold"
+                                  dangerouslySetInnerHTML={{
+                                    __html: parseFormattedText(procedure.name, locale)
+                                  }}
+                                />
+                                {procedure.description && (
+                                  <span className="text-gray-600"> — {procedure.description}</span>
+                                )}
+                              </div>
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       )}
                     </div>
 

@@ -83,7 +83,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/team"
+                                    href="/#team"
                                     className='text-[19px] font-medium text-gray-900 hover:text-burgundy transition-colors whitespace-nowrap'
                                 >
                                     {t('team')}
@@ -115,7 +115,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/team"
+                                    href="/#team"
                                     className='text-base font-medium text-gray-900 hover:text-burgundy transition-colors'
                                 >
                                     {t('team')}
@@ -185,7 +185,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/team"
+                                    href="/#team"
                                     className='text-sm font-medium text-gray-700 hover:text-gray-900 block'
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
