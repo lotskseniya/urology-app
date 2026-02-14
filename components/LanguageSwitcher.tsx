@@ -11,8 +11,6 @@ const LanguageSwitcher = () => {
 
   // Generate new path by replacing locale prefix
   const getLocalizedPath = (newLocale: string) => {
-    // pathname is like "/uk/services/hyperplasia-treatment"
-    // Replace /uk/ with /en/ or vice versa
     return pathname.replace(`/${currentLocale}`, `/${newLocale}`)
   }
 

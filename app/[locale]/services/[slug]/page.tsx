@@ -233,7 +233,7 @@ export default async function ServicePage({
                   <ul className="space-y-2 mb-6 list-none">
                     {diagnosticMethods.map((method: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        {(slug !== 'mens-and-womens-health' || 'hyperplasia-treatment') && (
+                        {slug !== 'mens-and-womens-health' && slug !== 'hyperplasia-treatment' && (
                           <span className="text-[#911F16] text-xl mt-1">-</span>
                         )}
                         <div
