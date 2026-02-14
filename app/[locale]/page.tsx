@@ -2,6 +2,22 @@ import { getTranslations } from 'next-intl/server';
 import HomeClient from '@/components/HomeClient';
 import { Service } from '@/lib/types';
 
+interface ServiceProcedure {
+  name: string;
+  description: string;
+}
+
+interface RawService {
+  id: string;
+  title: string;
+  description: string;
+  icon?: string;
+  slug: string;
+  preview?: string;
+  procedures?: ServiceProcedure[];
+  image?: string;
+}
+
 export default async function Home({
   params
 }: {
@@ -9,10 +25,9 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const tServices = await getTranslations('services');
-  const rawServices = tServices.raw('items') as any[];
+  const rawServices = tServices.raw('items') as RawService[];
 
-  // Ensure all required fields exist
-  const services: Service[] = rawServices.map((service) => ({
+  const services: Service[] = rawServices.map((service: RawService) => ({
     id: service.id,
     title: service.title,
     description: service.description,

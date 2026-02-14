@@ -1,37 +1,51 @@
-'use client'
+import { getTranslations } from 'next-intl/server';
+import ServicesSection from '@/components/servicesSection';
+import { Service } from '@/lib/types';
 
-import { useTranslations } from 'next-intl'
-import ServicesSection from '@/components/servicesSection'
+interface ServiceProcedure {
+  name: string;
+  description: string;
+}
 
-export default function ServicesPage() {
-  const t = useTranslations('services')
+interface RawService {
+  id: string;
+  title: string;
+  description: string;
+  icon?: string;
+  slug: string;
+  preview?: string;
+  procedures?: ServiceProcedure[];
+  image?: string;
+}
 
-  const services = [
-    {
-      id: 'service1',
-      title: t('service1.title'),
-      description: t('service1.description'),
-      icon: t('service1.icon'),
-      slug: t('service1.slug')
-    },
-    {
-      id: 'service2',
-      title: t('service2.title'),
-      description: t('service2.description'),
-      icon: t('service2.icon'),
-      slug: t('service2.slug')
-    },
-    // ... more services
-  ]
+export default async function ServicesPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  const t = await getTranslations('services');
+  const rawServices = t.raw('items') as RawService[];
+
+  const services: Service[] = rawServices.map((service: RawService) => ({
+    id: service.id,
+    title: service.title,
+    description: service.description,
+    icon: service.icon || '',
+    slug: service.slug,
+    preview: service.preview || '',
+    procedures: service.procedures || [],
+    image: service.image || ''
+  }));
 
   return (
     <main className="">
       <ServicesSection
         services={services}
-        locale="uk" // or get from params
+        locale={locale}
         title={t('title')}
         subtitle={t('subtitle')}
       />
     </main>
-  )
+  );
 }

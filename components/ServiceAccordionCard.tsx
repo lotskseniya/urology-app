@@ -107,7 +107,7 @@ const ServiceAccordionCard = ({
 
                       {procedures && procedures.length > 0 && (
                         <ul className="space-y-2 list-none">
-                          {procedures.map((procedure: any, idx: number) => (
+                          {procedures.map((procedure: { name: string; description: string }, idx: number) => (
                             <li key={idx} className="flex items-start gap-2">
                               <span className="text-burgundy">•</span>
                               <div>
