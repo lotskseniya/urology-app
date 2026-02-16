@@ -661,49 +661,36 @@
         "bladder-cancer-treatment": {
             "title": "BLADDER CANCER TREATMENT",
             "subtitle": [
-                "Bladder cancer is one of the most common oncourological diseases requiring timely detection and comprehensive treatment."
+                "In our urology department, doctors effectively treat bladder tumors using modern methods."
             ],
             "diagnostics": {
                 "title": "",
                 "intro": "",
                 "methods": [],
-                "description": [
-                    "Timely diagnosis allows detecting the disease in early stages and selecting the most effective treatment."
-                ]
+                "description": []
             },
             "treatment": {
                 "title": "Treatment Methods:",
                 "subtitle": "",
                 "description": [
-                    "Choice of treatment method depends on disease stage, depth of tumor invasion and patient's general condition."
+                    "Superficial bladder cancer is a tumor that does not penetrate the muscular layer of the wall and is located on the mucous membrane. Transurethral resection of the bladder is used to treat this type of cancer.",
+                    "During TUR, a biopsy of the bladder walls is also performed from areas around the tumor.",
+                    "A distinctive feature of the operation is that there are no incisions on the patient's body:",
+                    " - It is performed using a special instrument (resectoscope), which is inserted into the bladder through the urethra.",
+                    " - A special optical device is inserted through the resectoscope into the bladder cavity, which displays images on a monitor screen.",
+                    " - The tumor is removed using a loop at the end of the resectoscope, through which high-power electric current passes.",
+                    "</br>For small tumors, specifically bladder tumors that do not extend beyond the bladder wall, they can be removed through the urethra without making any skin incisions – TUR. For such operations, the number of tumors or their size is not important; the effectiveness of operations largely depends on the surgeon's expertise.",
+                    "</br>In terms of effectiveness, this operation has significant advantages. The short recovery period and minimal risk of postoperative complications make transurethral resection the 'gold standard' in the treatment of superficial bladder tumor processes."
                 ],
-                "methods": [
-                    {
-                        "name": "Transurethral Resection (TUR) of bladder tumor",
-                        "description": "endoscopic removal of superficial tumors through the urethra"
-                    },
-                    {
-                        "name": "Radical cystectomy",
-                        "description": "complete bladder removal for invasive cancer"
-                    },
-                    {
-                        "name": "Bladder reconstruction",
-                        "description": "creation of new reservoir from intestinal segment after cystectomy"
-                    },
-                    {
-                        "name": "Intravesical immunotherapy and chemotherapy",
-                        "description": "direct drug administration into bladder for recurrence prevention"
-                    },
-                    {
-                        "name": "Laparoscopic and robotic surgeries",
-                        "description": "minimally invasive methods with high precision"
-                    }
-                ],
+                "methods": [],
                 "advantages": [
-                    "Organ-sparing operations in early stages",
-                    "Modern reconstruction methods after cystectomy",
-                    "Comprehensive recurrence prevention",
-                    "Regular monitoring and control"
+                    "Targeted removal of neoplasm;",
+                    "Minimal post-operative trauma;",
+                    "No risk of bleeding;",
+                    "Minimized risk of complications;",
+                    "No stitches or scars after surgery;",
+                    "Rapid recovery;",
+                    "No contraindications for surgery even if the patient has comorbidities."
                 ]
             },
             "prevention": {
@@ -1667,5 +1654,34 @@
                 ]
             }
         }
+    },
+    "contactForm": {
+        "title": "Відправити запит на Консультацію",
+        "subtitle": "Ви можете обрати лікаря, до якого б хотіли записатись на прийом",
+        "address": {
+            "label": "Адреса:",
+            "value": "м. Київ, вул. Чорних Запорожців 26"
+        },
+        "email": {
+            "label": "My Email:",
+            "value": "mymail@gmail.com"
+        },
+        "phone": {
+            "label": "Телефон",
+            "value": "00-1234 00000"
+        },
+        "fields": {
+            "name": "Ім'я, Прізвище, По-батькові*",
+            "phone": "Телефон*",
+            "email": "E-mail",
+            "birthDate": "Дата Народження *",
+            "subject": "Лікар",
+            "selectDoctor": "Оберіть лікаря",
+            "message": "Повідомлення (по бажанню - можете коротко описати)"
+        },
+        "submit": "ВІДПРАВИТИ ЗАПИТ",
+        "privacyNotice": "Інформація про Ваші данні є конфіденційною, і необхідна нам для ...... відповідно до Наказу МОЗ ........",
+        "successMessage": "Ваш запит успішно відправлено!",
+        "errorMessage": "Помилка при відправці форми. Спробуйте ще раз."
     }
 }

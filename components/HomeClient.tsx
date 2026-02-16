@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl';
 import ServicesSection from '@/components/servicesSection';
 import TeamSection from '@/components/TeamSection';
+import ContactForm from "@/components/ContactForm";
 import TreatmentSteps from '@/components/TreatmentSteps'
 import Image from 'next/image';
 import { Service } from '@/lib/types'
@@ -11,9 +12,18 @@ interface HomeClientProps {
     locale: string;
     servicesTitle: string;
     servicesSubtitle: string;
+    doctors: Array<{ id: number; name: string; tags: number[] }>;
+    globalTags: Array<{ id: number; name: string }>;
 }
 
-export default function HomeClient({ services, locale, servicesTitle, servicesSubtitle }: HomeClientProps) {
+export default function HomeClient({
+    services,
+    locale,
+    servicesTitle,
+    servicesSubtitle,
+    doctors,
+    globalTags
+}: HomeClientProps) {
     const t = useTranslations('hero');
 
     return (
@@ -139,7 +149,20 @@ export default function HomeClient({ services, locale, servicesTitle, servicesSu
 
             <TeamSection />
 
-            <TreatmentSteps />
+
+            {/* TreatmentSteps with contained scrolling */}
+            <div className="relative">
+                <TreatmentSteps />
+            </div>
+
+            {/* Contact Form - rendered after TreatmentSteps, with higher z-index */}
+            <div className="relative z-50">
+                <ContactForm
+                    locale={locale}
+                    doctors={doctors}
+                    globalTags={globalTags}
+                />
+            </div>
         </>
     );
 }
