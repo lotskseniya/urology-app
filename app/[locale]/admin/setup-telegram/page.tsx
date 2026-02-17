@@ -71,7 +71,7 @@ export default function TelegramSetup() {
                             <li>Відкрийте Telegram на телефоні</li>
                             <li>Знайдіть бот: <code className="bg-gray-200 px-2 py-1 rounded">@third_urology_kyiv_bot</code></li>
                             <li>Натисніть <strong>START</strong></li>
-                            <li>Надішліть своє прізвище та імʼя, щоб я додала Ваш ID в систему</li>
+                            <li>Надішліть своє прізвище та імʼя англійською, щоб я опбачила Ваш telegram ID і додала в систему розсилки</li>
                         </ol>
                     </div>
 
