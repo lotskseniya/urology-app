@@ -72,25 +72,15 @@ export default function TelegramSetup() {
                             <li>Знайдіть бот: <code className="bg-gray-200 px-2 py-1 rounded">@third_urology_bot</code></li>
                             <li>Натисніть <strong>START</strong></li>
                             <li>Надішліть своє прізвище та імʼя, щоб я додала Ваш ID в систему</li>
-                            <li>Натисніть кнопку нижче щоб отримати всі Chat ID</li>
                         </ol>
                     </div>
-
-                    <button
-                        onClick={checkForMessages}
-                        disabled={checking}
-                        className="w-full py-3 px-6 rounded-lg text-white font-semibold transition-colors hover:opacity-90"
-                        style={{ backgroundColor: checking ? '#ccc' : '#8B1E1E' }}
-                    >
-                        {checking ? 'Перевірка...' : 'Показати всі Chat ID'}
-                    </button>
 
                     {error && (
                         <div className="bg-red-50 border-l-4 border-red-500 p-4">
                             <p className="text-red-700">{error}</p>
                         </div>
                     )}
-
+{/* 
                     {messages.length > 0 && (
                         <div className="space-y-4">
                             <h2 className="text-xl font-bold" style={{ color: '#8B1E1E' }}>
@@ -119,7 +109,7 @@ export default function TelegramSetup() {
                                 </div>
                             ))}
                         </div>
-                    )}
+                    )} */}
                 </div>
             </div>
         </div>
