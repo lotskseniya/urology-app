@@ -12,6 +12,15 @@ interface ContactFormData {
     locale: string;
 }
 
+interface DoctorData {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    telegramChatId: string;
+    tags: number[];
+}
+
 export async function POST(request: NextRequest) {
     try {
         console.log('=== Contact Form API Called ===');
@@ -19,7 +28,6 @@ export async function POST(request: NextRequest) {
         const formData: ContactFormData = await request.json();
         console.log('Form data received:', formData);
 
-        // Get doctors data
         const doctorsJson = process.env.DOCTORS_DATA;
         console.log('DOCTORS_DATA exists:', !!doctorsJson);
         
@@ -30,26 +38,18 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const doctors = JSON.parse(doctorsJson);
-        console.log('Parsed doctors:', doctors.length);
-        
-        const doctor = doctors.find((d: any) => d.id === parseInt(formData.doctorId));
-        console.log('Found doctor:', doctor);
+        const doctors = JSON.parse(doctorsJson) as DoctorData[];
+        const doctor = doctors.find((d: DoctorData) => d.id === parseInt(formData.doctorId));
         
         if (!doctor) {
             return NextResponse.json({ error: 'Doctor not found' }, { status: 400 });
         }
 
-        // Get subject name from translations
-        console.log('Getting translations for locale:', formData.locale);
         const tTeam = await getTranslations({ locale: formData.locale, namespace: 'team' });
         const globalTags = tTeam.raw('labels.globalTags') as Record<string, string>;
         const subjectName = globalTags[formData.subject] || formData.subject;
-        console.log('Subject name:', subjectName);
 
-        // Send to Google Apps Script
         const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
-        console.log('Script URL exists:', !!scriptUrl);
         
         if (!scriptUrl) {
             return NextResponse.json(
@@ -71,26 +71,18 @@ export async function POST(request: NextRequest) {
             doctorTelegramChatId: doctor.telegramChatId || '',
             telegramBotToken: process.env.TELEGRAM_BOT_TOKEN || ''
         };
-        
-        console.log('Sending to Google Script:', scriptUrl);
-        console.log('Payload:', JSON.stringify(payload, null, 2));
 
         const response = await fetch(scriptUrl, {
             method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
 
-        console.log('Google Script response status:', response.status);
-        const result = await response.json();
-        console.log('Google Script result:', result);
+        const result = await response.json() as { success: boolean; error?: string };
 
         if (result.success) {
             return NextResponse.json({ success: true });
         } else {
-            console.error('Script error:', result.error);
             return NextResponse.json(
                 { success: false, error: result.error },
                 { status: 500 }
@@ -98,16 +90,9 @@ export async function POST(request: NextRequest) {
         }
 
     } catch (error) {
-        console.error('=== Contact form error ===');
-        console.error('Error type:', error instanceof Error ? error.constructor.name : typeof error);
-        console.error('Error message:', error instanceof Error ? error.message : String(error));
-        console.error('Error stack:', error instanceof Error ? error.stack : 'No stack trace');
-        
+        console.error('Contact form error:', error instanceof Error ? error.message : String(error));
         return NextResponse.json(
-            { 
-                success: false, 
-                error: error instanceof Error ? error.message : 'Unknown error'
-            },
+            { success: false, error: 'Failed to process request' },
             { status: 500 }
         );
     }

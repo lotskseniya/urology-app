@@ -9,6 +9,15 @@ interface TelegramMessage {
     date: string
 }
 
+interface TelegramUpdate {
+    message?: {
+        chat?: { id: number }
+        from?: { first_name?: string; last_name?: string }
+        text?: string
+        date?: number
+    }
+}
+
 export default function TelegramSetup() {
     const [messages, setMessages] = useState<TelegramMessage[]>([])
     const [checking, setChecking] = useState(false)
@@ -23,13 +32,13 @@ export default function TelegramSetup() {
 
             if (data.updates && data.updates.length > 0) {
                 const allMessages = data.updates
-                    .filter((update: any) => update.message?.chat?.id)
-                    .map((update: any) => ({
-                        chatId: update.message.chat.id.toString(),
-                        userName: update.message.from?.first_name +
-                            (update.message.from?.last_name ? ' ' + update.message.from.last_name : ''),
-                        message: update.message.text || 'No text',
-                        date: new Date(update.message.date * 1000).toLocaleString('uk-UA')
+                    .filter((update: TelegramUpdate) => update.message?.chat?.id)
+                    .map((update: TelegramUpdate) => ({
+                        chatId: update.message!.chat!.id.toString(),
+                        userName: (update.message!.from?.first_name || '') +
+                            (update.message!.from?.last_name ? ' ' + update.message!.from.last_name : ''),
+                        message: update.message!.text || 'No text',
+                        date: new Date((update.message!.date || 0) * 1000).toLocaleString('uk-UA')
                     }))
 
                 // Remove duplicates (same chat ID)
@@ -41,8 +50,8 @@ export default function TelegramSetup() {
             } else {
                 setError('Повідомлень не знайдено. Надішліть повідомлення боту та спробуйте ще раз.')
             }
-        } catch (error) {
-            console.error(error)
+        } catch (err) {
+            console.error(err)
             setError('Помилка при отриманні даних')
         }
         setChecking(false)
@@ -62,8 +71,8 @@ export default function TelegramSetup() {
                             <li>Відкрийте Telegram на телефоні</li>
                             <li>Знайдіть бот: <code className="bg-gray-200 px-2 py-1 rounded">@third_urology_bot</code></li>
                             <li>Натисніть <strong>START</strong></li>
-                            <li>Напишіть своє ім'я</li>
-                            <li>Натисніть кнопку нижче щоб дізнатись Chat ID</li>
+                            <li>Надішліть своє прізвище та імʼя, щоб я додала Ваш ID в систему</li>
+                            <li>Натисніть кнопку нижче щоб отримати всі Chat ID</li>
                         </ol>
                     </div>
 

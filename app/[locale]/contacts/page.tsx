@@ -1,5 +1,15 @@
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/ContactForm';
+import { Service } from '@/lib/types';
+
+interface RawDoctor {
+    id: number;
+    name: string;
+    tags: number[];
+    email?: string;
+    phone?: string;
+    telegramChatId?: string;
+}
 
 export default async function ContactsPage({
     params
@@ -7,19 +17,20 @@ export default async function ContactsPage({
     params: Promise<{ locale: string }>
 }) {
     const { locale } = await params;
-    const t = await getTranslations('globalTags');
+    const tTeam = await getTranslations('team');
 
-    // Get doctors from environment (without sensitive data for client)
-    const doctorsData = JSON.parse(process.env.DOCTORS_DATA || '[]');
-    const doctors = doctorsData.map((d: any) => ({
+    const doctorsData = JSON.parse(process.env.DOCTORS_DATA || '[]') as RawDoctor[];
+    const doctors = doctorsData.map((d: RawDoctor) => ({
         id: d.id,
         name: d.name,
         tags: d.tags,
-        // Don't expose email/phone/telegram to client
     }));
 
-    // Get global tags from translations
-    const globalTags = t.raw('tags') as Array<{ id: number; name: string }>;
+    const globalTagsRaw = tTeam.raw('labels.globalTags') as Record<string, string>;
+    const globalTags = Object.entries(globalTagsRaw).map(([id, name]) => ({
+        id: parseInt(id),
+        name: name
+    }));
 
     return (
         <ContactForm
