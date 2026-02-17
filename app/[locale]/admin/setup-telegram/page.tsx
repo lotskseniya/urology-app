@@ -69,7 +69,7 @@ export default function TelegramSetup() {
                         <p className="font-semibold mb-2">Інструкція:</p>
                         <ol className="list-decimal list-inside space-y-2 text-sm">
                             <li>Відкрийте Telegram на телефоні</li>
-                            <li>Знайдіть бот: <code className="bg-gray-200 px-2 py-1 rounded">@third_urology_bot</code></li>
+                            <li>Знайдіть бот: <code className="bg-gray-200 px-2 py-1 rounded">@third_urology_kyiv_bot</code></li>
                             <li>Натисніть <strong>START</strong></li>
                             <li>Надішліть своє прізвище та імʼя, щоб я додала Ваш ID в систему</li>
                         </ol>
